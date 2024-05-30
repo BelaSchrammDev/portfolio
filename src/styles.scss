@@ -1,5 +1,7 @@
+@import './variables.scss';
+
 body {
-    background-color: #FFFCF3;
+    background-color: $main_bg_color;
     margin: 0;
     padding: 0;
 }

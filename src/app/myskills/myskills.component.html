@@ -1,0 +1,11 @@
+<section>
+    <div class="skillset">
+        <span class="title">MySkills</span>
+        @for(skill of skillSet; track skillSet) {
+        <div class="skill">
+            <img src="./assets/images/skills/{{ skill.icon }}.svg" alt="">
+            <span>{{skill.name}}</span>
+        </div>
+        }
+    </div>
+</section>

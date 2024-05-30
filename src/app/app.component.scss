@@ -1,3 +1,5 @@
+@import '../variables.scss';
+
 section {
     max-width: 1440px;
     min-height: 100dvh;
@@ -7,6 +9,13 @@ section {
     flex-direction: column;
     justify-content: flex-start;
     align-items: stretch;
+}
+
+app-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: $main_bg_color;
 }
 
 app-landingpage {
