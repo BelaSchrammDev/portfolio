@@ -64,7 +64,7 @@ section {
                 height: $picture-height;
                 width: $picture-width;
                 border: $border-width solid black;
-                transition: opacity 0.1s ease-in-out;
+                transition: opacity 0.2s ease-in-out;
             }
 
             &:hover .border {
