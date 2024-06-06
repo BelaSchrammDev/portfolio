@@ -10,7 +10,7 @@ import { Component, HostListener, Input } from '@angular/core';
 })
 export class ArrowspaceComponent {
 
-  animationPlayed: boolean = false;
+  animationState: 'begin' | 'moveforward' | 'freeze' | 'movebackward' = 'begin';
 
   @Input() alignment: string = 'left';
   @Input() section: string = `section_${Math.random().toString(36).substr(2, 9)}`;
@@ -18,22 +18,28 @@ export class ArrowspaceComponent {
   @HostListener('mouseover', ['$event'])
 
   onMouseOver(event: MouseEvent) {
-    if (this.animationPlayed) return;
+    if (this.animationState != 'begin') return;
     const animElement = document.getElementById(this.section) as unknown as SVGAnimateElement;
     if (animElement) {
       animElement.beginElement();
-      this.animationPlayed = true;
+      this.animationState = 'moveforward';
+      setTimeout(() => {
+        this.animationState = 'freeze';
+      }, 550);
     }
   }
 
   @HostListener('mouseleave', ['$event'])
 
   onMouseLeave(event: MouseEvent) {
-    if (!this.animationPlayed) return;
+    if (this.animationState != 'freeze') return;
     const animElement = document.getElementById(this.section + 'return') as unknown as SVGAnimateElement;
     if (animElement) {
       animElement.beginElement();
-      this.animationPlayed = false;
+      this.animationState = 'movebackward';
+      setTimeout(() => {
+        this.animationState = 'begin';
+      }, 550);
     }
   }
 }
