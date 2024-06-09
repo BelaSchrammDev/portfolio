@@ -12,6 +12,12 @@ section {
         font-size: $headline-font-size;
         font-weight: 800;
         text-align: center;
+        transition: all 0.15s ease-in-out;
+
+        &:hover {
+            cursor: default;
+            color: $main_highlight_color;
+        }
     }
 
     .text {
@@ -20,5 +26,15 @@ section {
         font-weight: 400;
         line-height: 28px;
         text-align: center;
+    }
+
+    .projectlist {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        gap: 20px;
+        padding-left: $main-padding-dynamic;
+        padding-right: $main-padding-dynamic;
     }
 }

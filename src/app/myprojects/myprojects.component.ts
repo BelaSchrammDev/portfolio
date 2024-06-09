@@ -26,7 +26,7 @@ export class MyprojectsComponent {
     },
     {
       name: 'El pollo loco',
-      tags: ['HTML', 'CSS', 'JavaScript'],
+      tags: ['HTML', 'CSS', 'JavaScript', 'OOP'],
       description: 'A chicken restaurant website.',
       image: 'pollo.jpeg',
     }

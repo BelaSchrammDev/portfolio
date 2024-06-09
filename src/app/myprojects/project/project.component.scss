@@ -1,64 +1,194 @@
 @import '../../../variables.scss';
 
+$project-picture-width: clamp(240px, calc(620px * 100vw / $max-width), 620px);
+$project-picture-height: calc($project-picture-width * 0.66);
+
+$project-title-font-size: clamp(27px, calc(45px * 100vw / $max-width), 45px);
+$project-tag-font-size: clamp(16px, calc(23px * 100vw / $max-width), 23px);
+$project-text-font-size: clamp(12px, calc(16px * 100vw / $max-width), 16px);
+
+$picture-width: calc($project-picture-width - 20px);
+$picture-height: calc($project-picture-height - 20px);
+$badge-size: clamp(40px, calc(80px * 100vw / $max-width), 80px);
+
 section {
     position: relative;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-
-    .content {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-    }
 
     .projectnum {
         position: absolute;
         top: 0;
         right: 0;
         font-family: Syne;
-        font-size: 48px;
+        font-size: $project-title-font-size;
         font-weight: 700;
-        line-height: 58px;
+        line-height: $project-title-font-size;
     }
 
-    .picture {
-        width: $project-picture-width;
-        height: $project-picture-height;
+    .content {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: $badge-size;
 
-        img {
-            width: calc($project-picture-width - 20px);
-            height: calc($project-picture-height - 20px);
+        .picture_section {
+            position: relative;
+            width: $project-picture-width;
+            height: $project-picture-height;
+
+            .frame {
+                position: absolute;
+                bottom: 0;
+                width: calc(100% - 20px);
+                height: calc(100% - 20px);
+                border: 4px solid black;
+                opacity: 0;
+                transition: all 0.3s ease-in-out;
+
+
+                .badge {
+                    width: $badge-size;
+                    height: $badge-size;
+                    top: 50%;
+
+                    .badge_svg {
+                        width: $badge-size;
+                        height: $badge-size;
+                        transition: all 0.3s cubic-bezier(1, 0, 0.58, 1);
+                    }
+
+                }
+
+                .badge_right {
+                    position: absolute;
+                    transform: translateX(50%) translateY(-50%) rotate(135deg);
+                    right: 0;
+                }
+
+                .badge_left {
+                    position: absolute;
+                    transform: translateX(-50%) translateY(-50%) rotate(135deg);
+                    left: 0;
+                }
+
+            }
+
+            .frame_left {
+                left: 0;
+            }
+
+            .frame_right {
+                right: 0;
+            }
+
+            .picture {
+                position: absolute;
+                width: calc(100% - 20px);
+                height: calc(100% - 20px);
+                filter: grayscale(100%);
+                transition: all 0.3s ease-in-out;
+            }
+
+            .picture_left {
+                right: 0;
+            }
+
+            .picture_right {
+                left: 0;
+            }
+
+
         }
+
+        .description {
+            z-index: -10;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            width: $project-picture-width;
+            height: $project-picture-height;
+            transition: all 0.3s ease-in-out;
+
+            >span:first-child {
+                font-family: Syne;
+                font-size: $project-title-font-size;
+                font-weight: 800;
+                color: black;
+            }
+
+            >span:nth-child(2) {
+                font-family: Overpass;
+                font-size: $project-tag-font-size;
+                font-weight: 400;
+                line-height: 28px;
+                color: $main_highlight_color;
+            }
+
+            >span:nth-child(3) {
+                font-family: Overpass;
+                font-size: $project-text-font-size;
+                font-weight: 400;
+                line-height: 19px;
+                color: black;
+            }
+        }
+
+        .description_left {
+            transform: translateX(calc(-100% - $badge-size));
+        }
+
+        .description_right {
+            transform: translateX(calc(100% + $badge-size));
+        }
+
+        .description_top {
+            transform: translateY(-100%);
+        }
+
+        &:hover {
+            .picture_section>.frame {
+                opacity: 1;
+            }
+
+            .picture_section>.frame>.badge>.badge_svg {
+                transform: rotate(-135deg);
+            }
+
+            .picture_section>.picture {
+                filter: grayscale(0%);
+            }
+
+            .description {
+                transform: translateX(0) translateY(0) !important;
+            }
+        }
+
+    }
+}
+
+@media (max-width: 650px) {
+
+    section {
+        padding-top: calc($project-title-font-size + 20px) !important;
+    }
+
+    .projectnum {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+    .content {
+        flex-direction: column !important;
+    }
+
+    .picture_section {
+        width: 90vw !important;
+        height: calc(90vw * 0.66) !important;
     }
 
     .description {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-
-        >span:first-child {
-            font-family: Syne;
-            font-size: 45px;
-            font-weight: 800;
-            color: black;
-        }
-
-        >span:nth-child(2) {
-            font-family: Overpass;
-            font-size: 23px;
-            font-weight: 400;
-            line-height: 28px;
-            color: $main_highlight_color;
-        }
-
-        >span:nth-child(3) {
-            font-family: Overpass;
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 19px;
-            color: black;
-        }
+        width: 90vw !important;
+        height: max-content !important;
+        transform: translateY(calc(-100% - $badge-size - 20px)) !important;
     }
 }

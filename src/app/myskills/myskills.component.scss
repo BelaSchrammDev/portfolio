@@ -25,6 +25,7 @@ section {
             background-color: $main_bg_color;
             position: absolute;
             top: calc($headline-font-size / 1.5 * -1);
+            transition: all 0.15s ease-in-out;
 
             &:hover {
                 cursor: default;
@@ -56,8 +57,14 @@ section {
             text-align: center;
         }
 
-        &:hover img {
-            transform: translate3d(0, 0, -50px) rotate3d(0, 1, 0, 360deg) translate3d(0, 0, 50px);
+        &:hover {
+            img {
+                transform: translate3d(0, 0, -50px) rotate3d(0, 1, 0, 360deg) translate3d(0, 0, 50px);
+            }
+
+            span {
+                cursor: default;
+            }
         }
 
         &:hover>span {
