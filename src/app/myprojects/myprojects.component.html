@@ -1,0 +1,8 @@
+<section>
+    <span class="headline">Portfolio</span>
+    <span class="text">Feel free to try out my latest development projects and look into their code..</span>
+    @for( project of projectlist; track projectlist) {
+    <app-project [project]="project" [index]="$index+1" [total]="projectlist.length"
+        [otherDirection]="$odd"></app-project>
+    }
+</section>

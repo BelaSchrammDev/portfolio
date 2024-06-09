@@ -1,0 +1,64 @@
+@import '../../../variables.scss';
+
+section {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    .content {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .projectnum {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-family: Syne;
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 58px;
+    }
+
+    .picture {
+        width: $project-picture-width;
+        height: $project-picture-height;
+
+        img {
+            width: calc($project-picture-width - 20px);
+            height: calc($project-picture-height - 20px);
+        }
+    }
+
+    .description {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        >span:first-child {
+            font-family: Syne;
+            font-size: 45px;
+            font-weight: 800;
+            color: black;
+        }
+
+        >span:nth-child(2) {
+            font-family: Overpass;
+            font-size: 23px;
+            font-weight: 400;
+            line-height: 28px;
+            color: $main_highlight_color;
+        }
+
+        >span:nth-child(3) {
+            font-family: Overpass;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19px;
+            color: black;
+        }
+    }
+}

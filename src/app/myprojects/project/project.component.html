@@ -1,0 +1,20 @@
+<section>
+    <span [style.left]="otherDirection ? 0 : 'unset'" class="projectnum">{{ index }}/{{ total }}</span>
+    <div [style.flex-direction]="otherDirection ? 'row-reverse' : 'row'" class="content">
+        @if (project) {
+        <div class="picture">
+            <img src="./assets/images/projects/{{ project.image }}" alt="">
+        </div>
+        <div class="description">
+            <span>{{ project.name }}</span>
+            <span>
+                @for(tag of project.tags; track project.tags) {
+                {{ tag }}
+                @if (!$last) {|}
+                }
+            </span>
+            <span>{{ project.description }}</span>
+        </div>
+        }
+    </div>
+</section>
