@@ -3,8 +3,6 @@
 $main-icon-size: clamp(60px, calc(100px * 100vw / $max-width), 100px);
 
 section {
-    padding-left: $main-padding-side;
-    padding-right: $main-padding-side;
 
     .skillset {
         position: relative;
@@ -19,18 +17,9 @@ section {
         .title {
             padding-left: $main-padding-side;
             padding-right: $main-padding-side;
-            font-family: Syne;
-            font-size: $headline-font-size;
-            font-weight: 800;
             background-color: $main_bg_color;
             position: absolute;
             top: calc($headline-font-size / 1.5 * -1);
-            transition: all 0.15s ease-in-out;
-
-            &:hover {
-                cursor: default;
-                color: $main_highlight_color;
-            }
         }
     }
 

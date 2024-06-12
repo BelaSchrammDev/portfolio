@@ -25,14 +25,6 @@ section {
         align-items: stretch;
         gap: 20px;
 
-        .headline {
-            font-family: Syne;
-            font-weight: 800;
-            font-size: $headline-font-size;
-            line-height: $headline-font-size;
-            text-align: left;
-        }
-
         .text {
             font-family: Overpass;
             font-weight: 400;
