@@ -1,4 +1,4 @@
-@import '../../variables.scss';
+@import '../../../styles/variables.scss';
 
 $headline-font-size: clamp(35px, calc(128px * 100vw / $max-width), 128px);
 $name-font-size: clamp(16px, calc(48px * 100vw / $max-width), 48px);

@@ -1,4 +1,4 @@
-@import '../../../variables.scss';
+@import '../../../../styles/variables.scss';
 
 $project-picture-width: clamp(240px, calc(620px * 100vw / $max-width), 620px);
 $project-picture-height: calc($project-picture-width * 0.66);

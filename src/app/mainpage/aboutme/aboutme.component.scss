@@ -1,4 +1,4 @@
-@import '../../variables.scss';
+@import '../../../styles/variables.scss';
 
 
 $picture-height: clamp(260px, calc(530px * 100vw / $max-width), 530px);
