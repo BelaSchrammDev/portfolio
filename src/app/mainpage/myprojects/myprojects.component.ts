@@ -25,6 +25,12 @@ export class MyprojectsComponent {
       image: 'join.jpeg',
     },
     {
+      name: 'Pokewiki',
+      tags: ['Angular', 'SCSS', 'TypeScript', 'REST API'],
+      description: 'A website that displays information about Pokemon using the PokeAPI.',
+      image: 'join.jpeg',
+    },
+    {
       name: 'El pollo loco',
       tags: ['HTML', 'CSS', 'JavaScript', 'OOP'],
       description: 'A chicken restaurant website.',
