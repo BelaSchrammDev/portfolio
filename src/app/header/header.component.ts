@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -11,6 +11,15 @@ import { FormsModule } from '@angular/forms';
 })
 export class HeaderComponent {
 
+  @HostListener('document:click', ['$event'])
+  onClick(event: MouseEvent) {
+    const targetID = (event.target as Element).id;
+    if (this.burgermenushow && targetID != 'burgermenusvg') {
+      event.preventDefault();
+      this.burgermenushow = false;
+    }
+  }
+
   private _burgermenushow: boolean = false;
 
   get burgermenushow(): boolean {
@@ -18,12 +27,11 @@ export class HeaderComponent {
   }
 
   set burgermenushow(value: boolean) {
+    if (value === this._burgermenushow) return;
     this._burgermenushow = value;
     let animID = 'burgermenu';
     if (!value) animID += '-back';
     const animElement = document.getElementById(animID) as unknown as SVGAnimateElement;
-    if (animElement) {
-      animElement.beginElement();
-    }
+    if (animElement) animElement.beginElement();
   }
 }

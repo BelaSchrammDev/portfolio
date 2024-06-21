@@ -8,6 +8,7 @@ $main-padding-dynamic: clamp(20px, calc(5vw), 60px);
 $main_bg_color: #FFFCF3;
 $main_highlight_color: #5988ff;
 
+$menu-font-size: clamp(27px, calc(96px * 100vw / $max-width), 96px);
 $headline-font-size: clamp(27px, calc(78px * 100vw / $max-width), 78px);
 $content-font-size: clamp(18px, calc(23px * 100vw / $max-width), 23px);
 

@@ -4,7 +4,8 @@
     <div class="burgermenu-div">
         <input type="checkbox" [(ngModel)]="burgermenushow" name="menu" id="menu">
         <label for="menu">
-            <svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg id="burgermenusvg" width="300" height="300" viewBox="0 0 300 300" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
                 <g stroke="black" stroke-width="30">
                     <path d="M0 15 h300 M0 150 h300 M0 285 h300">
                         <animate id="burgermenu" attributeName="d"
@@ -19,5 +20,17 @@
         </label>
     </div>
 
+    <div [style.height.dvh]=" burgermenushow ? 80 : 0 " class="dropdownmenu">
+        <div class="menupoints">
+            <a href="">About Me</a>
+            <a href="">My Skills</a>
+            <a href="">My Projects</a>
+        </div>
+        <div class="menufooter">
+            <svg width="1440" height="318" viewBox="0 0 1440 318" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0L1588 181L1632 348H0V0Z" fill="black" />
+            </svg>
+        </div>
+    </div>
 
 </section>
