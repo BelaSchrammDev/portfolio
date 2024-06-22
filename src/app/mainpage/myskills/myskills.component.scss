@@ -3,6 +3,7 @@
 $main-icon-size: clamp(60px, calc(100px * 100vw / $max-width), 100px);
 
 section {
+    scroll-margin-top: calc($header-height + ($headline-font-size / 1.5));
 
     .skillset {
         position: relative;

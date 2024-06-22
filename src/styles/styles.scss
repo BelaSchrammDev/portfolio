@@ -22,3 +22,10 @@ body {
         color: $main_highlight_color;
     }
 }
+
+.mail {
+    font-family: Overpass;
+    font-size: clamp(12px, calc(23px * 100vw / $max-width), 23px);
+    line-height: 23px;
+    font-weight: 300;
+}

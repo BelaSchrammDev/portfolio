@@ -8,6 +8,7 @@ $me-width: calc($picture-width + $main-padding-side);
 $me-height: calc($picture-height + $main-padding-side);
 
 section {
+    scroll-margin-top: $header-height;
     padding-top: 50px;
     display: flex;
     justify-content: flex-start;

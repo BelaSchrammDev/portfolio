@@ -6,13 +6,13 @@
         <label for="menu">
             <svg id="burgermenusvg" width="300" height="300" viewBox="0 0 300 300" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
-                <g stroke="black" stroke-width="30">
-                    <path d="M0 15 h300 M0 150 h300 M0 285 h300">
+                <g stroke="black" stroke-width="30" stroke-linecap="round">
+                    <path d="M20 15 l260 0 M20 150 l260 0 M20 285 l260 0">
                         <animate id="burgermenu" attributeName="d"
-                            values="M0 15 l300 0 M0 150 l300 0 M0 285 l300 0; M0 15 l200 0 M0 150 l300 0 M100 285 l300 0; M0 0 l150 150 M0 300 l300 -300 M150 150 l150 150"
+                            values="M20 15 l260 0 M20 150 l260 0 M20 285 l260 0; M20 15 l200 0 M20 150 l260 0 M120 285 l160 0; M20 20 l130 130 M20 280 l260 -260 M150 150 l130 130"
                             dur="0.3s" repeatCount="1" fill="freeze" begin="indefinite" />
                         <animate id="burgermenu-back" attributeName="d"
-                            values=" M0 0 l150 150 M0 300 l300 -300 M150 150 l150 150; M0 15 l200 0 M0 150 l300 0 M100 285 l300 0; M0 15 l300 0 M0 150 l300 0 M0 285 l300 0"
+                            values="M20 20 l130 130 M20 280 l260 -260 M150 150 l130 130; M20 15 l200 0 M20 150 l260 0 M120 285 l160 0; M20 15 l260 0 M20 150 l260 0 M20 285 l260 0"
                             dur="0.3s" repeatCount="1" fill="freeze" begin="indefinite" />
                     </path>
                 </g>
@@ -20,25 +20,33 @@
         </label>
     </div>
 
-    <div [style.height.dvh]=" burgermenushow ? 80 : 0 " class="dropdownmenu">
+    <div [style.height.dvh]="burgermenushow ? 80 : 0 " class="dropdownmenu">
         <div class="menupoints">
-            <a href="">
+            <a href="#aboutme-section">
                 <div class="moveline"></div>
                 <span>About Me</span>
             </a>
-            <a href="">
+            <a href="#myskill-section">
                 <div class="moveline"></div>
                 <span>My Skills</span>
             </a>
-            <a href="">
+            <a href="#projects-section">
                 <div class="moveline"></div>
                 <span>My Projects</span>
             </a>
         </div>
         <div class="menufooter">
-            <svg width="1440" height="318" viewBox="0 0 1440 318" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 0L1588 181L1632 348H0V0Z" fill="black" />
-            </svg>
+            <div class="sayhi">
+                <span class="section-headline">Say Hi!</span>
+                <span class="mail">contact&#64;bela-schramm.de</span>
+            </div>
+            <div class="links">
+                <a target="_blank" href="https://github.com/BelaSchrammDev"><img src="./../../assets/images/github.svg"
+                        alt=""></a>
+                <a target="_blank" href=""><img src="./../../assets/images/mail.svg" alt=""></a>
+                <a target="_blank" href="https://www.linkedin.com/in/b%C3%A9la-schramm-aab333299/"><img
+                        src="./../../assets/images/linkedin.svg" alt=""></a>
+            </div>
         </div>
     </div>
 
