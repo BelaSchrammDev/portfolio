@@ -67,10 +67,44 @@ section {
         }
 
         .scroll {
+            align-self: stretch;
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
             align-items: center;
+
+            .wrapper {
+                overflow: hidden;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+
+                img {
+                    overflow: hidden;
+                    animation-name: scrollarrow;
+                    animation-duration: 3s;
+                    animation-iteration-count: infinite;
+                }
+            }
+
+            @keyframes scrollarrow {
+                0% {
+                    transform: translateY(-200%);
+                }
+
+                40% {
+                    transform: translateY(0);
+                }
+
+                60% {
+                    transform: translateY(0);
+                }
+
+                100% {
+                    transform: translateY(200%);
+                }
+            }
         }
     }
 }
