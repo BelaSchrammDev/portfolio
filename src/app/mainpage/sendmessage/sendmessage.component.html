@@ -1,0 +1,63 @@
+<section>
+    <div class="headline">
+        <span class="section-headline">Say Hi!</span>
+    </div>
+    <div class="formdiv">
+        <span class="line1">Want to discuss a new project?</span>
+        <span class="line2">Say hello! let's discuss ideas and make it happen</span>
+        <form (ngSubmit)="onSubmit(messageform)" class="messageform" #messageform="ngForm">
+            <div class="inputfield">
+                <label for="name">Name</label>
+                <input [(ngModel)]="messagedata.name" #m_name="ngModel" type="text" name="name" id="name" required>
+                @if(m_name.invalid && (m_name.dirty || m_name.touched)) {
+                <img src="./../../../assets/images/input-invalid.svg" class="badge" alt="">
+                }
+                @else if (m_name.valid && (m_name.dirty || m_name.touched)) {
+                <img src="./../../../assets/images/input-valid.svg" class="badge" alt="">
+                }
+            </div>
+            @if(m_name.invalid && (m_name.dirty || m_name.touched)) {
+            <span class="error">enter a name</span>
+            }
+
+            <div class="inputfield">
+                <label for="email">EMail</label>
+                <input [(ngModel)]="messagedata.email" #m_email="ngModel" type="email" name="email" id="email" required
+                    pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" placeholder=" ">
+                @if(m_email.invalid && (m_email.dirty || m_email.touched)) {
+                <img src="./../../../assets/images/input-invalid.svg" class="badge" alt="">
+                }
+                @else if (m_email.valid && (m_email.dirty || m_email.touched)) {
+                <img src="./../../../assets/images/input-valid.svg" class="badge" alt="">
+                }
+            </div>
+            @if(m_email.invalid && (m_email.dirty || m_email.touched)) {
+            <span class="error">enter a valid mailadress</span>
+            }
+
+            <div class="inputfield">
+                <label for="message">Message</label>
+                <textarea [(ngModel)]="messagedata.message" #m_message="ngModel" name="message" id="message" required
+                    placeholder=" "></textarea>
+                @if(m_message.invalid && (m_message.dirty || m_message.touched)) {
+                <img src="./../../../assets/images/input-invalid.svg" class="badge_textarea" alt="">
+                }
+                @else if (m_message.valid && (m_message.dirty || m_message.touched)) {
+                <img src="./../../../assets/images/input-valid.svg" class="badge_textarea" alt="">
+                }
+            </div>
+            @if(m_message.invalid && (m_message.dirty || m_message.touched)) {
+            <span class="error">enter a message</span>
+            }
+
+            <div class="ppread-div">
+                <input [(ngModel)]="ppread" type="checkbox" name="ppread" id="ppread" required>
+                <label for="ppread">I've read the privacy policy and agree to the processing of my data as
+                    outlined</label>
+            </div>
+
+            <input type="submit" value="Submit" name="send" [disabled]="messageform.invalid">
+
+        </form>
+    </div>
+</section>

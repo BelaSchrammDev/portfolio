@@ -15,7 +15,6 @@ export class HeaderComponent {
   onClick(event: MouseEvent) {
     const targetID = (event.target as Element).id;
     const isALink = (event.target as Element).parentElement?.tagName === 'A';
-    console.log('targetID:', targetID, 'targetTagName:', isALink);
     if (this.burgermenushow && targetID != 'burgermenusvg') {
       if (!isALink) event.preventDefault();
       this.burgermenushow = false;

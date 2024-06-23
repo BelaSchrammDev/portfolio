@@ -4,6 +4,7 @@ import { AboutmeComponent } from "./aboutme/aboutme.component";
 import { ArrowspaceComponent } from "./arrowspace/arrowspace.component";
 import { MyskillsComponent } from "./myskills/myskills.component";
 import { MyprojectsComponent } from "./myprojects/myprojects.component";
+import { SendmessageComponent } from './sendmessage/sendmessage.component';
 
 @Component({
     selector: 'app-mainpage',
@@ -15,7 +16,8 @@ import { MyprojectsComponent } from "./myprojects/myprojects.component";
         AboutmeComponent,
         ArrowspaceComponent,
         MyskillsComponent,
-        MyprojectsComponent
+        MyprojectsComponent,
+        SendmessageComponent
     ]
 })
 export class MainpageComponent {

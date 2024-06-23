@@ -1,0 +1,169 @@
+@import '../../../styles/variables.scss';
+
+section {
+
+    .headline {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        color: white;
+        padding: 20px;
+        height: 150px;
+        background-image: url('./../../../assets/images/blackramp.svg');
+        background-size: cover;
+    }
+
+    .formdiv {
+        color: white;
+        background-color: black;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+
+        .line1 {
+            font-family: Overpass;
+            font-size: 32px;
+            font-weight: 700;
+            color: $main_highlight_color;
+        }
+
+        .line2 {
+            font-family: Overpass;
+            font-size: 23px;
+            font-weight: 400;
+            color: white;
+        }
+
+        .messageform {
+            width: max-content;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: stretch;
+            gap: 20px;
+            padding: 20px;
+
+            .error {
+                color: red;
+                font-size: 12px;
+            }
+
+            .inputfield {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                justify-content: flex-start;
+                align-items: stretch;
+                border: 2px solid transparent;
+                border-bottom: 2px solid white;
+                font-family: Overpass;
+                font-size: 16px;
+                font-weight: 400;
+                color: white;
+
+                &:hover {
+                    border: 2px solid white;
+                }
+
+                .badge {
+                    position: absolute;
+                    transform: translateY(-50%);
+                    top: 50%;
+                    right: 20px;
+                    height: 30px;
+                    width: 30px;
+                }
+
+                .badge_textarea {
+                    position: absolute;
+                    top: 10px;
+                    right: 20px;
+                    height: 30px;
+                    width: 30px;
+                }
+
+                label:has(~ input[type="text"]),
+                label:has(~ input[type="email"]) {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 10px;
+                    transition: all 0.15s ease-in-out;
+
+                    &:has(~ input:focus),
+                    &:has(~ input[type="email"]:not(:placeholder-shown)),
+                    &:has(~ input[type="text"]:valid) {
+                        top: 0;
+                        background-color: black;
+                        padding: 0 5px;
+                    }
+                }
+
+                label:has(~ textarea) {
+                    position: absolute;
+                    top: 10px;
+                    left: 10px;
+                    transition: all 0.15s ease-in-out;
+
+                    &:has(~ textarea:focus),
+                    &:has(~ textarea:not(:placeholder-shown)) {
+                        top: 0;
+                        transform: translateY(-50%);
+                        background-color: black;
+                        padding: 0 5px;
+                    }
+                }
+
+                input[type="text"],
+                input[type="email"] {
+                    height: 50px;
+                }
+
+                textarea {
+                    resize: none;
+                    height: 150px;
+                    padding-top: 16px;
+                }
+
+                input[type="text"],
+                input[type="email"],
+                textarea {
+                    color: white;
+                    background-color: black;
+                    outline: none;
+                    border: unset;
+                    font-family: Overpass;
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: white;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+
+            }
+
+            input[type="submit"] {
+                font-family: Overpass;
+                font-size: 23px;
+                font-weight: 400;
+                color: white;
+                background-color: black;
+                border: 2px solid white;
+
+                &:hover {
+                    font-weight: 500;
+                }
+
+                &:disabled {
+                    color: grey;
+                    border: 2px solid grey;
+                }
+            }
+        }
+    }
+}
