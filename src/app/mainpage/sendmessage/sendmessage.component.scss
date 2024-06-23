@@ -24,16 +24,20 @@ section {
         align-items: center;
         gap: 20px;
 
+        >span {
+            padding: 0 20px;
+        }
+
         .line1 {
             font-family: Overpass;
-            font-size: 32px;
+            font-size: clamp(20px, calc(32px * 100vw / $max-width), 32px);
             font-weight: 700;
             color: $main_highlight_color;
         }
 
         .line2 {
             font-family: Overpass;
-            font-size: 23px;
+            font-size: $content-font-size;
             font-weight: 400;
             color: white;
         }
@@ -154,15 +158,29 @@ section {
                 color: white;
                 background-color: black;
                 border: 2px solid white;
+                align-self: center;
+                padding: 10px 20px;
+                transition: all 0.1s ease-in-out;
 
-                &:hover {
-                    font-weight: 500;
+                &:hover:not(:disabled) {
+                    font-weight: 600;
+                    transform: scaleX(1.2);
                 }
 
                 &:disabled {
                     color: grey;
                     border: 2px solid grey;
                 }
+            }
+        }
+    }
+}
+
+@media (max-width: 660px) {
+    section {
+        .formdiv {
+            .messageform {
+                width: unset;
             }
         }
     }

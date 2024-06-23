@@ -7,6 +7,8 @@ section {
     justify-content: flex-start;
     align-items: stretch;
     gap: 20px;
+    padding-left: $main-padding-side;
+    padding-right: $main-padding-side;
 
     .text {
         font-family: Overpass;

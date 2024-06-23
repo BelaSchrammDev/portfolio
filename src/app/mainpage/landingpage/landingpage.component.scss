@@ -10,6 +10,8 @@ section {
     flex-direction: column;
     justify-content: flex-end;
     align-items: stretch;
+    padding-left: $main-padding-side;
+    padding-right: $main-padding-side;
 
     .headline {
         flex-grow: 1;

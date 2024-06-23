@@ -141,10 +141,6 @@ section {
             transform: translateX(calc(100% + $badge-size));
         }
 
-        .description_top {
-            transform: translateY(-100%);
-        }
-
         &:hover {
             .picture_section>.frame {
                 opacity: 1;
@@ -159,7 +155,7 @@ section {
             }
 
             .description {
-                transform: translateX(0) translateY(0) !important;
+                transform: translateX(0) translateY(0);
             }
         }
 
@@ -182,13 +178,30 @@ section {
     }
 
     .picture_section {
-        width: 90vw !important;
-        height: calc(90vw * 0.66) !important;
+        width: 85vw !important;
+        height: calc(85vw * 0.66) !important;
     }
 
     .description {
-        width: 90vw !important;
+        width: 100% !important;
         height: max-content !important;
-        transform: translateY(calc(-100% - $badge-size - 20px)) !important;
+    }
+
+    .description_left {
+        transform: translateX(+20px) translateY(-200%) !important;
+    }
+
+    .description_right {
+        transform: translateX(-20px) translateY(-200%) !important;
+    }
+
+    .content:hover {
+        .description_left {
+            transform: translateX(+20px) translateY(0) !important;
+        }
+
+        .description_right {
+            transform: translateX(-20px) translateY(0) !important;
+        }
     }
 }

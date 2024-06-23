@@ -51,10 +51,15 @@
             }
 
             <div class="ppread-div">
-                <input [(ngModel)]="ppread" type="checkbox" name="ppread" id="ppread" required>
-                <label for="ppread">I've read the privacy policy and agree to the processing of my data as
+                <input [(ngModel)]="ppread" #m_ppread="ngModel" type="checkbox" name="ppread" id="ppread" required>
+                <label for="ppread">I've read
+                    the privacy policy
+                    and agree to the processing of my data as
                     outlined</label>
             </div>
+            @if(!ppread && (m_ppread.dirty || m_ppread.touched)) {
+            <span class="error">read the privacy policy</span>
+            }
 
             <input type="submit" value="Submit" name="send" [disabled]="messageform.invalid">
 
