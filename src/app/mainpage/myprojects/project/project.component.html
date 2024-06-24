@@ -26,6 +26,11 @@
                 }
             </span>
             <span>{{ project.description }}</span>
+            <div class="links">
+                @for( link of project.links; track project.links) {
+                <button (click)="onLinkClick(link)">{{ link.name }}</button>
+                }
+            </div>
         </div>
         }
     </div>

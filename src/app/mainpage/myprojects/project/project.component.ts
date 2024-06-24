@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Project } from '../myprojects.component';
+import { Project, ProjectLink } from '../myprojects.component';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -15,4 +15,8 @@ export class ProjectComponent {
   @Input() index: number = 0;
   @Input() total: number = 10;
 
+  onLinkClick(link: ProjectLink) {
+    console.log('Opening link:', link.url);
+    window.open(link.url, '_blank');
+  }
 }
