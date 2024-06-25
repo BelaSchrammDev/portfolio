@@ -31,7 +31,7 @@ export class MyprojectsComponent {
       image: 'join.jpeg',
       links: [
         { name: 'GitHub', url: 'https://github.com/BelaSchrammDev/DA-join' },
-        { name: 'Live', url: 'https://join-41.developerakademie.net/index.html' }
+        { name: 'Live', url: 'http://join41.bela-schramm.de' }
       ],
     },
     {
