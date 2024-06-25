@@ -107,7 +107,8 @@ section {
             align-items: flex-start;
             width: $project-picture-width;
             height: $project-picture-height;
-            transition: transform 0.3s ease-in-out;
+            opacity: 0;
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 
             >span:first-child {
                 font-family: Syne;
@@ -166,7 +167,8 @@ section {
             transform: translateX(calc(100% + $badge-size));
         }
 
-        &:hover {
+        &:hover,
+        &:active {
             .picture_section>.frame {
                 opacity: 1;
             }
@@ -181,6 +183,7 @@ section {
 
             .description {
                 transform: translateX(0) translateY(0);
+                opacity: 1;
             }
         }
 
@@ -208,16 +211,16 @@ section {
     }
 
     .description {
-        width: 100% !important;
+        // width: 85vw !important;
         height: max-content !important;
     }
 
     .description_left {
-        transform: translateX(+20px) translateY(-200%) !important;
+        transform: translateX(+20px) translateY(-150%) !important;
     }
 
     .description_right {
-        transform: translateX(-20px) translateY(-200%) !important;
+        transform: translateX(-20px) translateY(-150%) !important;
     }
 
     .content:hover {
