@@ -1,28 +1,104 @@
+@import './../../styles/variables.scss';
+
 section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    border: 1px solid black;
+    padding: 20px 40px;
+    background-color: black;
 
     .left {
+        font-family: Overpass, sans-serif;
+        font-size: $content-font-size;
+        font-weight: 400;
+        color: white;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
         gap: 5px;
+
+        >img {
+            cursor: pointer;
+        }
     }
 
     .right {
+        color: white;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: flex-end;
         gap: 5px;
 
+        .links {
+            display: flex;
+            gap: $main-padding-dynamic;
+            justify-content: center;
+            align-items: flex-end;
+
+            a {
+                transition: all 0.15s ease-in-out;
+            }
+
+            a:hover {
+                transform: translateY(-10px);
+            }
+        }
+
+        >a {
+            position: relative;
+            font-family: Overpass, sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            color: white;
+            text-decoration: none;
+            transition: all 0.15s ease-in-out;
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 50%;
+                height: 1px;
+                opacity: 0;
+                border-bottom: 2px solid $main_highlight_color;
+                transition: all 0.15s ease-in-out;
+            }
+
+            &:hover::after {
+                left: 50%;
+                opacity: 1;
+            }
+
+            &:hover {
+                font-weight: 700;
+            }
+        }
+
+
+
         >div {
             display: flex;
             gap: 10px;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    section {
+        flex-direction: column;
+        gap: 20px;
+
+        .left {
+            gap: 20px;
+            align-items: center;
+        }
+
+        .right {
+            gap: 20px;
+            align-items: center;
         }
     }
 }
