@@ -28,20 +28,6 @@ section {
             padding: 0 20px;
         }
 
-        .line1 {
-            font-family: Overpass;
-            font-size: clamp(20px, calc(32px * 100vw / $max-width), 32px);
-            font-weight: 700;
-            color: $main_highlight_color;
-        }
-
-        .line2 {
-            font-family: Overpass;
-            font-size: $content-font-size;
-            font-weight: 400;
-            color: white;
-        }
-
         .messageform {
             width: max-content;
             display: flex;
@@ -50,6 +36,22 @@ section {
             align-items: stretch;
             gap: 20px;
             padding: 20px;
+
+            .line1 {
+                align-self: center;
+                font-family: Overpass;
+                font-size: clamp(20px, calc(32px * 100vw / $max-width), 32px);
+                font-weight: 700;
+                color: $main_highlight_color;
+            }
+
+            .line2 {
+                align-self: center;
+                font-family: Overpass;
+                font-size: $content-font-size;
+                font-weight: 400;
+                color: white;
+            }
 
             .error {
                 color: red;

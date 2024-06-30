@@ -22,8 +22,8 @@ export class SendmessageComponent {
   };
 
   ppread = false;
-
-  mailTest = true;
+  messagesending = false;
+  messagesended = false;
 
   post = {
     endPoint: 'https://bela-schramm.de/sendMail.php',
@@ -37,11 +37,17 @@ export class SendmessageComponent {
   };
 
   onSubmit(messageForm: NgForm) {
-    if (messageForm.submitted && messageForm.form.valid && !this.mailTest) {
+    if (messageForm.submitted && messageForm.form.valid) {
+      this.messagesending = true;
       this.http.post(this.post.endPoint, this.post.body(this.messagedata))
         .subscribe({
           next: (response) => {
-
+            this.messagesending = false;
+            this.messagesended = true;
+            setTimeout(() => {
+              this.messagesended = false;
+              this.messagesending = false;
+            }, 10000);
             messageForm.resetForm();
           },
           error: (error) => {
@@ -49,9 +55,6 @@ export class SendmessageComponent {
           },
           complete: () => console.info('send post complete'),
         });
-    } else if (messageForm.submitted && messageForm.form.valid && this.mailTest) {
-      console.log('Mail send test');
-      messageForm.resetForm();
     }
   }
 

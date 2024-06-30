@@ -31,10 +31,38 @@ export class MytranslateService {
 
   private text: TranslateableText[] = [
     {
+      id: 'messagesend1',
+      lang: [
+        { lang: 'en', text: 'Message has been sent successfully.' },
+        { lang: 'de', text: 'Nachricht wurde erfolgreich versendet.' }
+      ]
+    },
+    {
+      id: 'messagesend2',
+      lang: [
+        { lang: 'en', text: 'I will contact you as soon as possible.' },
+        { lang: 'de', text: 'Ich werde mich schnellstmöglich bei Ihnen melden.' }
+      ]
+    },
+    {
       id: 'message',
       lang: [
         { lang: 'en', text: 'Message' },
         { lang: 'de', text: 'Nachricht' }
+      ]
+    },
+    {
+      id: 'submit_sendet',
+      lang: [
+        { lang: 'en', text: 'Successfully sent' },
+        { lang: 'de', text: 'Erfolgreich versendet' }
+      ]
+    },
+    {
+      id: 'submit_sending',
+      lang: [
+        { lang: 'en', text: 'Message sending...' },
+        { lang: 'de', text: 'Nachricht senden...' }
       ]
     },
     {

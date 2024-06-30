@@ -3,12 +3,20 @@
         <span class="section-headline">{{ translate.getTranslation('sayhi') }}</span>
     </div>
     <div class="formdiv">
-        <span class="line1">{{ translate.getTranslation('sayhi1') }}</span>
-        <span class="line2">{{ translate.getTranslation('sayhi2') }}</span>
+
         <form (ngSubmit)="onSubmit(messageform)" class="messageform" #messageform="ngForm">
+            @if(messagesended) {
+            <span class="line1">{{ translate.getTranslation('messagesend1') }}</span>
+            <span class="line2">{{ translate.getTranslation('messagesend2') }}</span>
+            }
+            @else {
+            <span class="line1">{{ translate.getTranslation('sayhi1') }}</span>
+            <span class="line2">{{ translate.getTranslation('sayhi2') }}</span>
+            }
             <div class="inputfield">
                 <label for="name">Name</label>
-                <input [(ngModel)]="messagedata.name" #m_name="ngModel" type="text" name="name" id="name" required>
+                <input [disabled]="messagesending || messagesended" [(ngModel)]="messagedata.name" #m_name="ngModel"
+                    type="text" name="name" id="name" required>
                 @if(m_name.invalid && (m_name.dirty || m_name.touched)) {
                 <img src="./../../../assets/images/input-invalid.svg" class="badge" alt="">
                 }
@@ -22,7 +30,8 @@
 
             <div class="inputfield">
                 <label for="email">EMail</label>
-                <input [(ngModel)]="messagedata.email" #m_email="ngModel" type="email" name="email" id="email" required
+                <input [disabled]="messagesending || messagesended" [(ngModel)]="messagedata.email" #m_email="ngModel"
+                    type="email" name="email" id="email" required
                     pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" placeholder=" ">
                 @if(m_email.invalid && (m_email.dirty || m_email.touched)) {
                 <img src="./../../../assets/images/input-invalid.svg" class="badge" alt="">
@@ -37,8 +46,8 @@
 
             <div class="inputfield">
                 <label for="message">{{ translate.getTranslation('message') }}</label>
-                <textarea [(ngModel)]="messagedata.message" #m_message="ngModel" name="message" id="message" required
-                    placeholder=" "></textarea>
+                <textarea [disabled]="messagesending || messagesended" [(ngModel)]="messagedata.message"
+                    #m_message="ngModel" name="message" id="message" required placeholder=" "></textarea>
                 @if(m_message.invalid && (m_message.dirty || m_message.touched)) {
                 <img src="./../../../assets/images/input-invalid.svg" class="badge_textarea" alt="">
                 }
@@ -51,7 +60,8 @@
             }
 
             <div class="ppread-div">
-                <input [(ngModel)]="ppread" #m_ppread="ngModel" type="checkbox" name="ppread" id="ppread" required>
+                <input [disabled]="messagesending || messagesended" [(ngModel)]="ppread" #m_ppread="ngModel"
+                    type="checkbox" name="ppread" id="ppread" required>
                 <label for="ppread">
                     <img src="./../../../assets/images/check-not.svg" alt="">
                     <div>
@@ -65,8 +75,16 @@
             <span class="error">{{ translate.getTranslation('error_privacy') }}</span>
             }
 
+            @if(messagesending) {
+            <input type="submit" value="{{ translate.getTranslation('submit_sending') }}" name="send" [disabled]="true">
+            }
+            @else if(messagesended) {
+            <input type="submit" value="{{ translate.getTranslation('submit_sendet') }}" name="send" [disabled]="true">
+            }
+            @else {
             <input type="submit" value="{{ translate.getTranslation('submit') }}" name="send"
                 [disabled]="messageform.invalid">
+            }
 
         </form>
     </div>
