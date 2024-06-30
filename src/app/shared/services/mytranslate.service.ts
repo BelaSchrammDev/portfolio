@@ -1,8 +1,12 @@
 import { Injectable } from '@angular/core';
 
-// add new type with en and de as valid
-
 export type validLanguage = 'en' | 'de';
+
+export interface LanguageDefinition {
+  lang: validLanguage,
+  text: string,
+  icon: string
+}
 
 interface LanguageText {
   lang: validLanguage,
@@ -18,9 +22,21 @@ interface TranslateableText {
   providedIn: 'root'
 })
 export class MytranslateService {
-  language: validLanguage = 'en';
+  public languages: LanguageDefinition[] = [
+    { lang: 'en', text: 'English', icon: '[ENG]' },
+    { lang: 'de', text: 'Deutsch', icon: '[DEU]' }
+  ];
 
-  text: TranslateableText[] = [
+  private language: validLanguage = 'en';
+
+  private text: TranslateableText[] = [
+    {
+      id: 'message',
+      lang: [
+        { lang: 'en', text: 'Message' },
+        { lang: 'de', text: 'Nachricht' }
+      ]
+    },
     {
       id: 'submit',
       lang: [
@@ -179,6 +195,10 @@ export class MytranslateService {
 
   setLanguage(newLang: validLanguage) {
     this.language = newLang;
+  }
+
+  getLanguage(): validLanguage {
+    return this.language;
   }
 
   getTranslation(id: string): string {

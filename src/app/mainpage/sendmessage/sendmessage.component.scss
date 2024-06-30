@@ -172,8 +172,45 @@ section {
                     border: 2px solid grey;
                 }
             }
+
+            .ppread-div {
+                cursor: pointer;
+                font-family: Overpass;
+                font-size: 14px;
+                font-weight: 400;
+                color: white;
+
+                >input[type="checkbox"] {
+                    display: none;
+
+                    &:checked+label>img {
+                        content: url('./../../../assets/images/check-yes.svg');
+                    }
+                }
+
+                label {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 7px;
+                    cursor: pointer;
+
+                    >div>a {
+                        display: inline-block;
+                        color: $main_highlight_color;
+                        text-decoration: none;
+
+                        &:hover {
+                            transform: scaleX(1.05);
+                        }
+
+                    }
+                }
+            }
+
         }
     }
+
 }
 
 @media (max-width: 660px) {

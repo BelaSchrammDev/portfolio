@@ -36,7 +36,7 @@
             }
 
             <div class="inputfield">
-                <label for="message">Message</label>
+                <label for="message">{{ translate.getTranslation('message') }}</label>
                 <textarea [(ngModel)]="messagedata.message" #m_message="ngModel" name="message" id="message" required
                     placeholder=" "></textarea>
                 @if(m_message.invalid && (m_message.dirty || m_message.touched)) {
@@ -53,9 +53,12 @@
             <div class="ppread-div">
                 <input [(ngModel)]="ppread" #m_ppread="ngModel" type="checkbox" name="ppread" id="ppread" required>
                 <label for="ppread">
-                    {{ translate.getTranslation('text_privacy1') }}
-                    <a href="">{{ translate.getTranslation('privacy') }}</a>
-                    {{ translate.getTranslation('text_privacy2') }}
+                    <img src="./../../../assets/images/check-not.svg" alt="">
+                    <div>
+                        {{ translate.getTranslation('text_privacy1') }}
+                        <a routerLink="privacy">{{ translate.getTranslation('privacy') }}</a>
+                        {{ translate.getTranslation('text_privacy2') }}
+                    </div>
                 </label>
             </div>
             @if(!ppread && (m_ppread.dirty || m_ppread.touched)) {

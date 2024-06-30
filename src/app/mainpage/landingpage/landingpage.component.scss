@@ -1,6 +1,5 @@
 @import '../../../styles/variables.scss';
 
-$headline-font-size: clamp(35px, calc(128px * 100vw / $max-width), 128px);
 $name-font-size: clamp(16px, calc(48px * 100vw / $max-width), 48px);
 
 section {
@@ -21,8 +20,8 @@ section {
         align-items: center;
         font-family: Syne;
         font-weight: 800;
-        font-size: $headline-font-size;
-        line-height: $headline-font-size;
+        font-size: $headone-font-size;
+        line-height: $headone-font-size;
 
         .namebar {
             padding-top: 10px;

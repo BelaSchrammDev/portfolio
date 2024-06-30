@@ -1,8 +1,8 @@
 @import '../../../styles/variables.scss';
 
 
-$picture-height: clamp(260px, calc(530px * 100vw / $max-width), 530px);
-$picture-width: clamp(260px, calc(540px * 100vw / $max-width), 540px);
+$picture-height: clamp(240px, calc(530px * 100vw / $max-width), 530px);
+$picture-width: clamp(240px, calc(540px * 100vw / $max-width), 540px);
 
 $me-width: calc($picture-width + $main-padding-side);
 $me-height: calc($picture-height + $main-padding-side);

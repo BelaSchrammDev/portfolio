@@ -15,6 +15,35 @@ section {
     .burgermenu-div {
         display: flex;
 
+        >.language-select {
+            align-self: center;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+            .line {
+                width: 2px;
+                height: calc($header-height - 20px);
+                background-color: black;
+            }
+
+            button {
+                padding: 5px;
+                background-color: transparent;
+                border: none;
+                color: $main-highlight-color;
+                font-family: Syne;
+                font-size: $content-font-size;
+                cursor: pointer;
+
+                &:disabled {
+                    pointer-events: none;
+                    color: gray;
+                    transform: scaleY(1.3);
+                }
+            }
+        }
+
         input[type="checkbox"] {
             display: none;
         }

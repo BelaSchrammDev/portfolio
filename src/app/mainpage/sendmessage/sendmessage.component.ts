@@ -2,11 +2,12 @@ import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { MytranslateService } from '../../shared/services/mytranslate.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-sendmessage',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, RouterModule],
   templateUrl: './sendmessage.component.html',
   styleUrl: './sendmessage.component.scss'
 })
