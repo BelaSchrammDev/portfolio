@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { MytranslateService } from '../../shared/services/mytranslate.service';
 
 @Component({
   selector: 'app-aboutme',
@@ -8,5 +9,6 @@ import { Component } from '@angular/core';
   styleUrl: './aboutme.component.scss'
 })
 export class AboutmeComponent {
+  translate = inject(MytranslateService);
 
 }

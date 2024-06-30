@@ -2,6 +2,10 @@
     <img src="./assets/images/bslogo.svg" alt="">
 
     <div class="burgermenu-div">
+        <div class="language-select">
+            <button (click)="translate.setLanguage('en')">Englisch</button>
+            <button (click)="translate.setLanguage('de')">Deutsch</button>
+        </div>
         <input type="checkbox" [(ngModel)]="burgermenushow" name="menu" id="menu">
         <label id="bm_switch" for="menu">
             <svg id="bm_switch" width="300" height="300" viewBox="0 0 300 300" fill="none"
@@ -24,20 +28,20 @@
         <div class="menupoints">
             <a href="#aboutme-section">
                 <div class="moveline"></div>
-                <span>About Me</span>
+                <span>{{ translate.getTranslation('aboutme') }}</span>
             </a>
             <a href="#myskill-section">
                 <div class="moveline"></div>
-                <span>My Skills</span>
+                <span>{{ translate.getTranslation('myskills') }}</span>
             </a>
             <a href="#projects-section">
                 <div class="moveline"></div>
-                <span>My Projects</span>
+                <span>{{ translate.getTranslation('myprojects') }}</span>
             </a>
         </div>
         <div class="menufooter">
             <div class="sayhi">
-                <span class="section-headline">Say Hi!</span>
+                <span class="section-headline">{{ translate.getTranslation('sayhi') }}</span>
                 <span class="mail">contact&#64;bela-schramm.de</span>
             </div>
             <div class="links">

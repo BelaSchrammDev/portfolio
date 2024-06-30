@@ -1,6 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, inject } from '@angular/core';
 import { Project, ProjectLink } from '../myprojects.component';
 import { CommonModule } from '@angular/common';
+import { MytranslateService } from '../../../shared/services/mytranslate.service';
 
 @Component({
   selector: 'app-project',
@@ -10,6 +11,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './project.component.scss'
 })
 export class ProjectComponent {
+  translate = inject(MytranslateService);
   @Input() project: Project | undefined;
   @Input() otherDirection: boolean = false;
   @Input() index: number = 0;

@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { MytranslateService } from '../shared/services/mytranslate.service';
 
 @Component({
   selector: 'app-footer',
@@ -9,7 +10,7 @@ import { RouterModule } from '@angular/router';
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
-
+  translate = inject(MytranslateService);
 
   scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });

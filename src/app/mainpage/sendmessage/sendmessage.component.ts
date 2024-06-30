@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { MytranslateService } from '../../shared/services/mytranslate.service';
 
 @Component({
   selector: 'app-sendmessage',
@@ -10,7 +11,7 @@ import { FormsModule, NgForm } from '@angular/forms';
   styleUrl: './sendmessage.component.scss'
 })
 export class SendmessageComponent {
-
+  translate = inject(MytranslateService);
   http = inject(HttpClient);
 
   messagedata = {

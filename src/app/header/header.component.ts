@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, Inject, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { MytranslateService } from '../shared/services/mytranslate.service';
 
 @Component({
   selector: 'app-header',
@@ -10,6 +11,7 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+  translate = inject(MytranslateService);
 
   @HostListener('document:click', ['$event'])
   onClick(event: MouseEvent) {

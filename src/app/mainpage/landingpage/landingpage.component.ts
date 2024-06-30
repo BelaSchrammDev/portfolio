@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { MytranslateService } from '../../shared/services/mytranslate.service';
 
 @Component({
   selector: 'app-landingpage',
@@ -8,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './landingpage.component.scss'
 })
 export class LandingpageComponent {
-
+  translate = inject(MytranslateService);
 }

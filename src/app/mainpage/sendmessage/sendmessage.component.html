@@ -1,10 +1,10 @@
 <section id="sendmessage-section">
     <div class="headline">
-        <span class="section-headline">Say Hi!</span>
+        <span class="section-headline">{{ translate.getTranslation('sayhi') }}</span>
     </div>
     <div class="formdiv">
-        <span class="line1">Want to discuss a new project?</span>
-        <span class="line2">Say hello! let's discuss ideas and make it happen</span>
+        <span class="line1">{{ translate.getTranslation('sayhi1') }}</span>
+        <span class="line2">{{ translate.getTranslation('sayhi2') }}</span>
         <form (ngSubmit)="onSubmit(messageform)" class="messageform" #messageform="ngForm">
             <div class="inputfield">
                 <label for="name">Name</label>
@@ -17,7 +17,7 @@
                 }
             </div>
             @if(m_name.invalid && (m_name.dirty || m_name.touched)) {
-            <span class="error">enter a name</span>
+            <span class="error">{{ translate.getTranslation('error_name') }}</span>
             }
 
             <div class="inputfield">
@@ -32,7 +32,7 @@
                 }
             </div>
             @if(m_email.invalid && (m_email.dirty || m_email.touched)) {
-            <span class="error">enter a valid mailadress</span>
+            <span class="error">{{ translate.getTranslation('error_mail') }}</span>
             }
 
             <div class="inputfield">
@@ -47,21 +47,23 @@
                 }
             </div>
             @if(m_message.invalid && (m_message.dirty || m_message.touched)) {
-            <span class="error">enter a message</span>
+            <span class="error">{{ translate.getTranslation('error_message') }}</span>
             }
 
             <div class="ppread-div">
                 <input [(ngModel)]="ppread" #m_ppread="ngModel" type="checkbox" name="ppread" id="ppread" required>
-                <label for="ppread">I've read
-                    the privacy policy
-                    and agree to the processing of my data as
-                    outlined</label>
+                <label for="ppread">
+                    {{ translate.getTranslation('text_privacy1') }}
+                    <a href="">{{ translate.getTranslation('privacy') }}</a>
+                    {{ translate.getTranslation('text_privacy2') }}
+                </label>
             </div>
             @if(!ppread && (m_ppread.dirty || m_ppread.touched)) {
-            <span class="error">read the privacy policy</span>
+            <span class="error">{{ translate.getTranslation('error_privacy') }}</span>
             }
 
-            <input type="submit" value="Submit" name="send" [disabled]="messageform.invalid">
+            <input type="submit" value="{{ translate.getTranslation('submit') }}" name="send"
+                [disabled]="messageform.invalid">
 
         </form>
     </div>

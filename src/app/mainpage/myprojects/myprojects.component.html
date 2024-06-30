@@ -1,6 +1,6 @@
 <section id="projects-section">
     <span class="section-headline">Portfolio</span>
-    <span class="text">Feel free to try out my latest development projects and look into their code..</span>
+    <span class="text">{{ translate.getTranslation('portfoliotext') }}</span>
     <div class="projectlist">
         @for( project of projectlist; track projectlist) {
         <app-project [project]="project" [index]="$index+1" [total]="projectlist.length"
