@@ -164,7 +164,7 @@ section {
             height: 250px;
             color: white;
             background-image: url('./../../assets/images/blackramp.svg');
-            background-size: cover;
+            background-size: 100% 100%;
             background-repeat: no-repeat;
             padding: $main-padding-side;
 
@@ -201,6 +201,7 @@ section {
 @media (max-width: 450px) {
     .menufooter {
         flex-direction: column;
+        justify-content: flex-end !important;
         max-height: 200px;
 
         .sayhi {
