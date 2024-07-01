@@ -29,7 +29,7 @@
         </label>
     </div>
 
-    <div [style.height.dvh]="burgermenushow ? 80 : 0 " class="dropdownmenu">
+    <div [ngClass]="{menuheight: burgermenushow}" class="dropdownmenu">
         <div class="menupoints">
             <a href="#aboutme-section">
                 <div class="moveline"></div>

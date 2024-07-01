@@ -16,6 +16,8 @@ section {
         font-weight: 400;
         line-height: 28px;
         text-align: center;
+        padding-left: $main-padding-side;
+        padding-right: $main-padding-side;
     }
 
     .projectlist {
@@ -29,7 +31,6 @@ section {
 
 @media (max-width: 650px) {
     section {
-        overflow: hidden;
         padding-left: 0px;
         padding-right: 0px;
     }

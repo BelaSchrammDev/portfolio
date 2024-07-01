@@ -1,5 +1,9 @@
 @import "../../styles/variables.scss";
 
+.menuheight {
+    height: calc(100dvh - $header-height) !important;
+}
+
 section {
     position: relative;
     display: flex;
@@ -14,6 +18,7 @@ section {
 
     .burgermenu-div {
         display: flex;
+        gap: 20px;
 
         >.language-select {
             align-self: center;
@@ -23,7 +28,7 @@ section {
 
             .line {
                 width: 2px;
-                height: calc($header-height - 20px);
+                height: calc($header-height / 2);
                 background-color: black;
             }
 

@@ -10,6 +10,26 @@ body {
     padding: 0;
 }
 
+// add custom scrollbar
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: $main_bg_color;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $main_highlight_color;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: $main_highlight_color;
+}
+
+
+
 * {
     box-sizing: border-box;
 }
