@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
+import { MytranslateService } from '../shared/services/mytranslate.service';
 
 @Component({
   selector: 'app-imprint',
@@ -8,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './imprint.component.scss'
 })
 export class ImprintComponent implements OnInit {
+  translate = inject(MytranslateService);
 
   ngOnInit() {
     window.scrollTo({

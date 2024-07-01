@@ -31,6 +31,34 @@ export class MytranslateService {
 
   private text: TranslateableText[] = [
     {
+      id: 'source',
+      lang: [
+        { lang: 'en', text: 'Source' },
+        { lang: 'de', text: 'Quelle' }
+      ]
+    },
+    {
+      id: 'phone',
+      lang: [
+        { lang: 'en', text: 'Phone' },
+        { lang: 'de', text: 'Telefon' }
+      ]
+    },
+    {
+      id: 'contact',
+      lang: [
+        { lang: 'en', text: 'Contact' },
+        { lang: 'de', text: 'Kontakt' }
+      ]
+    },
+    {
+      id: 'imprint',
+      lang: [
+        { lang: 'en', text: 'Legal Notice' },
+        { lang: 'de', text: 'Impressum' }
+      ]
+    },
+    {
       id: 'messagesend1',
       lang: [
         { lang: 'en', text: 'Message has been sent successfully.' },
