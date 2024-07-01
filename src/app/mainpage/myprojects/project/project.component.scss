@@ -24,7 +24,7 @@ section {
 
     .content {
         display: flex;
-        justify-content: flex-start;
+        justify-content: space-between;
         align-items: center;
         gap: $badge-size;
 
@@ -179,6 +179,7 @@ section {
             }
 
             .description {
+                max-height: 1000px;
                 transform: translateX(0) translateY(0);
                 opacity: 1;
             }
@@ -208,7 +209,7 @@ section {
     }
 
     .description {
-        height: max-content !important;
+        max-height: 10px;
     }
 
     .description_left {

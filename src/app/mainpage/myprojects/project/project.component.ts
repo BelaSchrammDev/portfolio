@@ -18,7 +18,6 @@ export class ProjectComponent {
   @Input() total: number = 10;
 
   onLinkClick(link: ProjectLink) {
-    console.log('Opening link:', link.url);
     window.open(link.url, '_blank');
   }
 }
