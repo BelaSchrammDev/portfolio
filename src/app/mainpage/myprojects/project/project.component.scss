@@ -210,23 +210,25 @@ section {
 
     .description {
         max-height: 10px;
+        width: 95vw !important;
+        align-items: center !important;
     }
 
     .description_left {
-        transform: translateX(+20px) translateY(-150%) !important;
+        transform: translateX(0px) translateY(-150%) !important;
     }
 
     .description_right {
-        transform: translateX(-20px) translateY(-150%) !important;
+        transform: translateX(0px) translateY(-150%) !important;
     }
 
     .content:hover {
         .description_left {
-            transform: translateX(+20px) translateY(0) !important;
+            transform: translateX(0px) translateY(0) !important;
         }
 
         .description_right {
-            transform: translateX(-20px) translateY(0) !important;
+            transform: translateX(0px) translateY(0) !important;
         }
     }
 }
