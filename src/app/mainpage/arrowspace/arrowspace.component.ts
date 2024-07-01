@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener, Input } from '@angular/core';
+import { Component, ElementRef, HostListener, Input, OnInit, ViewChild, viewChild } from '@angular/core';
 
 @Component({
   selector: 'app-arrowspace',
@@ -8,38 +8,44 @@ import { Component, HostListener, Input } from '@angular/core';
   templateUrl: './arrowspace.component.html',
   styleUrl: './arrowspace.component.scss'
 })
-export class ArrowspaceComponent {
-
-  animationState: 'begin' | 'moveforward' | 'freeze' | 'movebackward' = 'begin';
+export class ArrowspaceComponent implements OnInit {
 
   @Input() alignment: string = 'left';
-  section: string = `section_${Math.random().toString(36).substring(2, 9)}`;
+  private viewstate: 'hidden' | 'show' = 'hidden';
+  elementID: string = 'arrow_' + Math.floor(Math.random() * 1000);
+  section: string = 'section_' + Math.floor(Math.random() * 1000);
 
-  @HostListener('mouseover', ['$event'])
+  constructor(private element: ElementRef) { }
 
-  onMouseOver(event: MouseEvent) {
-    if (this.animationState != 'begin') return;
-    const animElement = document.getElementById(this.section) as unknown as SVGAnimateElement;
-    if (animElement) {
-      animElement.beginElement();
-      this.animationState = 'moveforward';
-      setTimeout(() => {
-        this.animationState = 'freeze';
-      }, 550);
+  ngOnInit() {
+    this.element.nativeElement.id = this.elementID;
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  checkIsViewed(event: any) {
+    if (this.isElementInViewport() && this.viewstate === 'hidden') {
+      this.viewstate = 'show';
+      this.playSVGAnimation(this.section);
+    } else if (!this.isElementInViewport() && this.viewstate === 'show') {
+      this.viewstate = 'hidden';
+      this.playSVGAnimation(this.section + 'return');
     }
   }
 
-  @HostListener('mouseleave', ['$event'])
-
-  onMouseLeave(event: MouseEvent) {
-    if (this.animationState != 'freeze') return;
-    const animElement = document.getElementById(this.section + 'return') as unknown as SVGAnimateElement;
+  private playSVGAnimation(id: string) {
+    const animElement = document.getElementById(id) as unknown as SVGAnimateElement;
     if (animElement) {
       animElement.beginElement();
-      this.animationState = 'movebackward';
-      setTimeout(() => {
-        this.animationState = 'begin';
-      }, 550);
     }
+  }
+
+  private isElementInViewport() {
+    const rect = this.element.nativeElement.getBoundingClientRect();
+    const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+
+    return (
+      rect.top >= 0 &&
+      rect.bottom <= viewportHeight
+    );
   }
 }
