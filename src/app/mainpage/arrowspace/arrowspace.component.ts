@@ -13,7 +13,7 @@ export class ArrowspaceComponent {
   animationState: 'begin' | 'moveforward' | 'freeze' | 'movebackward' = 'begin';
 
   @Input() alignment: string = 'left';
-  @Input() section: string = `section_${Math.random().toString(36).substr(2, 9)}`;
+  section: string = `section_${Math.random().toString(36).substring(2, 9)}`;
 
   @HostListener('mouseover', ['$event'])
 
