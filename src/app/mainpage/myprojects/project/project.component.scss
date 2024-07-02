@@ -11,6 +11,7 @@ $badge-size: clamp(40px, calc(80px * 100vw / $max-width), 80px);
 
 section {
     position: relative;
+    overflow: hidden;
 
     .projectnum {
         position: absolute;
@@ -45,6 +46,7 @@ section {
 
 
                 .badge {
+                    border: 1px solid black;
                     width: $badge-size;
                     height: $badge-size;
                     top: 50%;
