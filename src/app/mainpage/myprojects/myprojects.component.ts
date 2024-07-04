@@ -35,7 +35,7 @@ export class MyprojectsComponent {
       image: 'join.jpeg',
       links: [
         { name: 'GitHub', url: 'https://github.com/BelaSchrammDev/DA-join' },
-        { name: 'Live', url: 'http://join41.bela-schramm.de' }
+        { name: 'Live', url: 'https://join41.bela-schramm.de/' }
       ],
     },
     {
@@ -46,7 +46,7 @@ export class MyprojectsComponent {
       image: 'pokewiki.jpeg',
       links: [
         { name: 'GitHub', url: 'https://github.com/BelaSchrammDev/DA_NG_pokewiki' },
-        { name: 'Live', url: 'http://www.pokewiki.bela-schramm.de/' }
+        { name: 'Live', url: 'https://pokewiki.bela-schramm.de/' }
       ],
     },
     {
@@ -57,7 +57,7 @@ export class MyprojectsComponent {
       image: 'pollo.jpeg',
       links: [
         { name: 'GitHub', url: 'https://github.com/BelaSchrammDev/DA_ElPolloLoco' },
-        { name: 'Live', url: 'http://www.epl.bela-schramm.de/' }
+        { name: 'Live', url: 'https://epl.bela-schramm.de/' }
       ],
     }
   ]
