@@ -53,3 +53,28 @@ body {
     line-height: 23px;
     font-weight: 300;
 }
+
+.hl-text {
+    color: black;
+    animation: hl-text-animation 2s normal;
+    animation-timing-function: ease-in-out;
+    animation-timeline: view();
+}
+
+@keyframes hl-text-animation {
+    0% {
+        color: black;
+    }
+
+    20% {
+        color: $main_highlight_color;
+    }
+
+    70% {
+        color: $main_highlight_color;
+    }
+
+    100% {
+        color: black;
+    }
+}

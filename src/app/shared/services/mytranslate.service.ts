@@ -152,7 +152,7 @@ export class MytranslateService {
     {
       id: 'desc_join',
       lang: [
-        { lang: 'en', text: 'A KanBan Board.' },
+        { lang: 'en', text: 'A <span class="hl-text">KanBan</span> Board.' },
         { lang: 'de', text: 'Ein Kanban Board.' }
       ]
     },
@@ -217,16 +217,16 @@ export class MytranslateService {
       lang: [
         {
           lang: 'en', text: `
-          I am a Front-end developer based in Leipzig, Germany. I enjoy helping designers and companies bring their
+          I am a Front-end developer based in <span class="hl-text">Leipzig</span>, Germany. I enjoy helping designers and companies bring their
             ideas into real life. I am looking forward to continuing my developer career with a job in a junior web
-            developer position.
-            If you think I’d be a good match for your projects, contact me!
+            developer position.<br><br>
+            If you think I’d be a <span class="hl-text">good match</span> for your projects, contact me!
           ` },
         {
           lang: 'de', text: `
           Ich bin ein Front-End-Entwickler mit Sitz in Leipzig, Deutschland.
           Mir macht es Spaß, Designern und Unternehmen dabei zu helfen, ihre Ideen in die Realität umzusetzen.
-          Ich freue mich darauf, meine Entwicklerkarriere mit einer Stelle als Junior Webentwickler fortzusetzen.
+          Ich freue mich darauf, meine Entwicklerkarriere mit einer Stelle als Junior Webentwickler fortzusetzen.<br><br>
           Wenn Sie denken, dass ich gut zu Ihren Projekten passen könnte, nehmen Sie Kontakt mit mir auf!
           ` }
       ]

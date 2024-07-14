@@ -3,8 +3,7 @@
         <div class="section-headline">
             {{ translate.getTranslation('aboutme') }}
         </div>
-        <div class="text">
-            {{ translate.getTranslation('aboutmetext') }}
+        <div [innerHTML]="translate.getTranslation('aboutmetext')" class="text">
         </div>
     </div>
     <div class="image">
