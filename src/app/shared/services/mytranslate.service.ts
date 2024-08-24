@@ -217,17 +217,15 @@ export class MytranslateService {
       lang: [
         {
           lang: 'en', text: `
-          I am a Front-end developer based in <span class="hl-text">Leipzig</span>, Germany. I enjoy helping designers and companies bring their
-            ideas into real life. I am looking forward to continuing my developer career with a job in a junior web
-            developer position.<br><br>
-            If you think I’d be a <span class="hl-text">good match</span> for your projects, contact me!
+          Hello! I am a passionate Front-End Developer from <span class="hl-text">Leipzig</span>. I am excited about helping <span class="hl-text">designers and businesses</span> bring their <span class="hl-text">creative visions</span> to life. I am particularly fascinated by how things work – or sometimes, how they don't. I love understanding the mechanics behind the scenes and analyzing problems in a structured and thorough way.
+          With an <span class="hl-text">eye for detail</span> and a structured approach, I tackle every challenge. Bugs in the software? <span class="hl-text">No problem!</span> I see them as exciting puzzles waiting to be solved.
+          I am eager to continue building my development career as a web developer and look forward to new, <span class="hl-text">exciting projects.</span> If you think I could be a good fit for your team and your projects, don't hesitate to contact me!
           ` },
         {
           lang: 'de', text: `
-          Ich bin ein Front-End-Entwickler mit Sitz in Leipzig, Deutschland.
-          Mir macht es Spaß, Designern und Unternehmen dabei zu helfen, ihre Ideen in die Realität umzusetzen.
-          Ich freue mich darauf, meine Entwicklerkarriere mit einer Stelle als Junior Webentwickler fortzusetzen.<br><br>
-          Wenn Sie denken, dass ich gut zu Ihren Projekten passen könnte, nehmen Sie Kontakt mit mir auf!
+          Hallo! Ich bin ein leidenschaftlicher Front-End-Entwickler aus <span class="hl-text">Leipzig</span>. Es begeistert mich, <span class="hl-text">Designern und Unternehmen</span> dabei zu helfen, ihre <span class="hl-text">kreativen Visionen</span> zum Leben zu erwecken. Besonders fasziniert mich, wie Dinge funktionieren – oder manchmal eben nicht. Ich liebe es, die Mechanik hinter den Kulissen zu verstehen und Probleme strukturiert und gründlich zu analysieren.
+          Mit einem <span class="hl-text">Auge fürs Detail</span> und einer strukturierten Arbeitsweise gehe ich jede Herausforderung an. Fehler in der Software? <span class="hl-text">Kein Problem!</span> Ich sehe sie als spannende Rätsel, die darauf warten, gelöst zu werden.
+          Ich freue mich darauf, meine Entwicklerkarriere als Webentwickler weiter auszubauen und bin gespannt auf neue, <span class="hl-text">aufregende Projekte.</span> Wenn Sie denken, dass ich gut zu Ihrem Team und Ihren Projekten passen könnte, zögern Sie nicht, mich zu kontaktieren!
           ` }
       ]
     },

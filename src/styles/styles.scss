@@ -61,6 +61,7 @@ body {
     animation-timeline: view();
 }
 
+
 @keyframes hl-text-animation {
     0% {
         color: black;
@@ -70,7 +71,7 @@ body {
         color: $main_highlight_color;
     }
 
-    70% {
+    80% {
         color: $main_highlight_color;
     }
 
