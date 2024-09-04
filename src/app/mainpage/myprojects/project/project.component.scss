@@ -105,8 +105,9 @@ section {
             flex-direction: column;
             justify-content: center;
             align-items: flex-start;
+            gap: $main-padding-side;
             width: $project-picture-width;
-            height: $project-picture-height;
+            // height: $project-picture-height;
             opacity: 0;
             transition: all 0.3s ease-in-out;
 

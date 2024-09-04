@@ -57,8 +57,11 @@ body {
 .hl-text {
     color: black;
     animation: hl-text-animation 2s normal;
+    --webkit-animation: hl-text-animation 2s normal;
     animation-timing-function: ease-in-out;
+    --webkit-animation-timing-function: ease-in-out;
     animation-timeline: view();
+    --webkit-animation-timeline: view();
 }
 
 
