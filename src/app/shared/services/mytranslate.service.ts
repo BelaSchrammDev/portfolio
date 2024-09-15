@@ -200,7 +200,7 @@ export class MytranslateService {
       id: 'sayhi1',
       lang: [
         { lang: 'en', text: 'Want to discuss a new project?' },
-        { lang: 'de', text: 'Möchten Sie ein neues Projekt besprechen?' }
+        { lang: 'de', text: 'Planen Sie ein neues Project?' }
       ]
     },
     {
