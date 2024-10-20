@@ -149,6 +149,26 @@ export class MytranslateService {
         { lang: 'de', text: 'Probieren Sie meine letzten Projekte, und schauen Sie sich auch den Code an.' }
       ]
     },
+    // desc_dabubble
+    {
+      id: 'desc_dabubble',
+      lang: [
+        {
+          lang: 'en', text: `
+          The "DaBubble" project is a comprehensive communication platform that allows users to interact in channels and direct messages. 
+          It offers features such as creating and managing channels, sending messages, files, and emoticons, as well as managing user accounts. 
+          The platform is responsive, cleanly coded in TypeScript, and optimized for user-friendliness. It also supports features like real-time status indicators, threads,
+          and an advanced search to make group and private communication efficient.
+          ` },
+        {
+          lang: 'de', text: `
+          Das Projekt "DaBubble" ist eine umfassende Kommunikationsplattform, die es Benutzern ermöglicht, in Channels und Direktnachrichten zu interagieren.
+          Es bietet Funktionen wie das Erstellen und Verwalten von Channels, das Schreiben von Nachrichten, das Senden von Dateien und Emoticons sowie die Verwaltung von Benutzerkonten.
+          Die Plattform ist responsive, sauber in TypeScript codiert und auf Benutzerfreundlichkeit optimiert. Zudem unterstützt sie Features wie Echtzeit-Statusanzeigen,
+          Threads und eine erweiterte Suche, um die Kommunikation in Gruppen und privat effizient zu gestalten.
+          ` }
+      ]
+    },
     {
       id: 'desc_join',
       lang: [
@@ -170,12 +190,14 @@ export class MytranslateService {
     {
       id: 'desc_pokewiki',
       lang: [
-        { lang: 'en', text: `
+        {
+          lang: 'en', text: `
           Pokewiki is a project that lists over 1,000 Pokémon, with data sourced from the PokeAPI. 
           The main focus of this project is on loading speed, with functionality designed to load Pokémon data as quickly and efficiently as possible. 
           Users can also search for specific Pokémon, providing a fast and smooth experience while exploring the Pokémon world.
           ` },
-        { lang: 'de', text: `
+        {
+          lang: 'de', text: `
           Pokewiki ist ein Projekt, das über 1.000 Pokémon auflistet. Die Daten stammen von der PokeAPI. 
           Der besondere Schwerpunkt dieses Projekts liegt auf der Ladegeschwindigkeit: Die Funktionalität ist darauf ausgelegt, 
           die Pokémon-Daten so schnell und performant wie möglich zu laden. Nutzer können zudem gezielt nach Pokémon suchen, um ein schnelles und reibungsloses Erlebnis beim Durchstöbern der Pokémon-Welt zu haben.
@@ -200,7 +222,7 @@ export class MytranslateService {
       id: 'sayhi1',
       lang: [
         { lang: 'en', text: 'Want to discuss a new project?' },
-        { lang: 'de', text: 'Planen Sie ein neues Project?' }
+        { lang: 'de', text: 'Planen Sie ein neues Projekt?' }
       ]
     },
     {

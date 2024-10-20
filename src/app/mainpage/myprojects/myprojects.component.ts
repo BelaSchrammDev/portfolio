@@ -28,6 +28,17 @@ export class MyprojectsComponent {
 
   projectlist: Project[] = [
     {
+      name: 'DABubble',
+      tags: ['Angular', 'SCSS', 'TypeScript', 'Firebase'],
+      description: 'A social networking app that allows users to join groups and create events.',
+      descriptionID: 'desc_dabubble',
+      image: 'dabubble.jpeg',
+      links: [
+        { name: 'GitHub', url: 'https://github.com/BelaSchrammDev/DA_Bubble' },
+        { name: 'Live', url: 'https://dabubble.bela-schramm.de/' }
+      ],
+    },
+    {
       name: 'Join',
       tags: ['HTML', 'CSS', 'JavaScript', 'Firebase'],
       description: 'A social networking app that allows users to join groups and create events.',
