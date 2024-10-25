@@ -22,20 +22,62 @@ section {
         font-weight: 800;
         font-size: $headone-font-size;
         line-height: $headone-font-size;
+        overflow: hidden;
+
+        .first-headline {
+            color: #5988FF;
+            animation: slideInFromRight 1s cubic-bezier(0, 0, 0, 1);
+        }
+
+        @keyframes slideInFromRight {
+            0% {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInFromLeft {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .second-headline {
+            color: black;
+            animation: slideInFromLeft 1s cubic-bezier(0, 0, 0, 1);
+        }
 
         .namebar {
             padding-top: 10px;
-            width: 70%;
+            width: 70vw;
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 20px;
+            animation: slideInFromRight 1s cubic-bezier(0, 0, 0, 1);
 
-            .line {
+            .line-wrapper {
                 flex-grow: 1;
-                width: 100%;
-                height: 3px;
-                background-color: black;
+                display: flex;
+                justify-content: flex-end;
+
+                .line {
+                    width: 100%;
+                    height: 3px;
+                    background-color: black;
+                    animation: extendLine 2s cubic-bezier(0, 0, 0, 1);
+                }
             }
 
             font-family: Overpass;
@@ -44,6 +86,16 @@ section {
             line-height: $name-font-size;
             white-space: nowrap;
             color: #5988FF;
+        }
+
+        @keyframes extendLine {
+            0% {
+                width: 10%;
+            }
+
+            100% {
+                width: 100%;
+            }
         }
     }
 
