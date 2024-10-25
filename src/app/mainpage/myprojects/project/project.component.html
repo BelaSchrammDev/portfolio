@@ -5,8 +5,7 @@
         <div class="picture_section">
             <img [ngClass]="{'picture_right': !otherDirection, 'picture_left': otherDirection, 'picture': true }"
                 src="./assets/images/projects/{{ project.image }}" alt="">
-            <div [ngClass]="{'frame_right': !otherDirection, 'frame_left': otherDirection, 'frame': true }">
-            </div>
+            <div class="frame"></div>
             <div [ngClass]="{'badge_right': !otherDirection, 'badge_left': otherDirection, 'badge': true }">
                 <svg class="badge_svg" width="76" height="76" viewBox="0 0 76 76" fill="none"
                     xmlns="http://www.w3.org/2000/svg">

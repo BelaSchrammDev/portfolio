@@ -34,7 +34,7 @@ export class MyprojectsComponent {
       descriptionID: 'desc_dabubble',
       image: 'dabubble.jpeg',
       links: [
-        { name: 'GitHub', url: 'https://github.com/BelaSchrammDev/DA_Bubble' },
+        { name: 'GitHub', url: 'https://github.com/BelaSchrammDev/dabubble-303' },
         { name: 'Live', url: 'https://dabubble.bela-schramm.de/' }
       ],
     },

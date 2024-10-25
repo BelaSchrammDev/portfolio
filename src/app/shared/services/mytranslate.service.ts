@@ -159,14 +159,16 @@ export class MytranslateService {
           It offers features such as creating and managing channels, sending messages, files, and emoticons, as well as managing user accounts. 
           The platform is responsive, cleanly coded in TypeScript, and optimized for user-friendliness. It also supports features like real-time status indicators, threads,
           and an advanced search to make group and private communication efficient.
-          ` },
+          `
+        },
         {
           lang: 'de', text: `
           Das Projekt "DaBubble" ist eine umfassende Kommunikationsplattform, die es Benutzern ermöglicht, in Channels und Direktnachrichten zu interagieren.
           Es bietet Funktionen wie das Erstellen und Verwalten von Channels, das Schreiben von Nachrichten, das Senden von Dateien und Emoticons sowie die Verwaltung von Benutzerkonten.
           Die Plattform ist responsive, sauber in TypeScript codiert und auf Benutzerfreundlichkeit optimiert. Zudem unterstützt sie Features wie Echtzeit-Statusanzeigen,
           Threads und eine erweiterte Suche, um die Kommunikation in Gruppen und privat effizient zu gestalten.
-          ` }
+          `
+        }
       ]
     },
     {
@@ -177,14 +179,16 @@ export class MytranslateService {
           JOIN is a Kanban system developed in Vanilla JavaScript and CSS, with Firebase as the backend. Users can sign up, create tasks, and add subtasks. 
           These tasks can be organized into four different columns and moved around, just like in a Kanban board. The project offers an intuitive and simple solution for task management, 
           providing a clear visualization of progress.
-          ` },
+          `
+        },
         {
           lang: 'de', text: `
           JOIN ist ein in Vanilla JavaScript und CSS entwickeltes Kanban-System, das Firebase als Backend nutzt. 
           Nutzer können sich anmelden, Aufgaben (Tasks) erstellen und diese mit Unteraufgaben (Subtasks) ergänzen. 
           Die Aufgaben lassen sich in vier verschiedene Spalten einordnen und beliebig verschieben, wie es für Kanban-Boards typisch ist. 
           Das Projekt bietet eine intuitive und einfache Lösung für das Aufgabenmanagement und ermöglicht eine klare Visualisierung des Fortschritts.
-          ` }
+          `
+        }
       ]
     },
     {
@@ -195,20 +199,30 @@ export class MytranslateService {
           Pokewiki is a project that lists over 1,000 Pokémon, with data sourced from the PokeAPI. 
           The main focus of this project is on loading speed, with functionality designed to load Pokémon data as quickly and efficiently as possible. 
           Users can also search for specific Pokémon, providing a fast and smooth experience while exploring the Pokémon world.
-          ` },
+          `
+        },
         {
           lang: 'de', text: `
           Pokewiki ist ein Projekt, das über 1.000 Pokémon auflistet. Die Daten stammen von der PokeAPI. 
           Der besondere Schwerpunkt dieses Projekts liegt auf der Ladegeschwindigkeit: Die Funktionalität ist darauf ausgelegt, 
           die Pokémon-Daten so schnell und performant wie möglich zu laden. Nutzer können zudem gezielt nach Pokémon suchen, um ein schnelles und reibungsloses Erlebnis beim Durchstöbern der Pokémon-Welt zu haben.
-          ` }
+          `
+        }
       ]
     },
     {
       id: 'desc_epl',
       lang: [
-        { lang: 'en', text: `El Pollo Loco is a simple 2D jump-and-run game. Playing as Pepe, you must jump on chickens and chicks to avoid taking damage. At the end, there's a big final boss chicken that you can defeat by throwing salsa bottles you've collected earlier. The game offers fun and excitement in a crazy chicken world!` },
-        { lang: 'de', text: `El Pollo Loco ist ein einfaches 2D-Jump-and-Run-Spiel. Mit der Figur Pepe hüpfst du auf Hühner und Küken, um Schaden zu vermeiden. Am Ende erwartet dich ein großes Endboss-Huhn, das du mit zuvor gesammelten Salsa-Flaschen bewerfen und besiegen kannst. Das Spiel bietet Spaß und Spannung in einer verrückten Hühnerwelt!` }
+        {
+          lang: 'en', text: `El Pollo Loco is a simple 2D jump-and-run game. Playing as Pepe, you must jump on chickens and chicks to avoid taking damage. 
+          At the end, there's a big final boss chicken that you can defeat by throwing salsa bottles you've collected earlier. 
+          The game offers fun and excitement in a crazy chicken world!`
+        },
+        {
+          lang: 'de', text: `El Pollo Loco ist ein einfaches 2D-Jump-and-Run-Spiel. Mit der Figur Pepe hüpfst du auf Hühner und Küken, um Schaden zu vermeiden. 
+          Am Ende erwartet dich ein großes Endboss-Huhn, das du mit zuvor gesammelten Salsa-Flaschen bewerfen und besiegen kannst. 
+          Das Spiel bietet Spaß und Spannung in einer verrückten Hühnerwelt!`
+        }
       ]
     },
     {
