@@ -45,7 +45,6 @@ export class MyprojectsComponent {
       description: 'A social networking app that allows users to join groups and create events.',
       descriptionID: 'desc_join',
       image: 'join.jpeg',
-      // video: 'join-flow.webm',
       video: 'join-flow.mp4',
       links: [
         { name: 'GitHub', url: 'https://github.com/BelaSchrammDev/DA-join' },
@@ -58,7 +57,7 @@ export class MyprojectsComponent {
       description: 'A website that displays information about Pokemon using the PokeAPI.',
       descriptionID: 'desc_pokewiki',
       image: 'pokewiki.jpeg',
-      video: 'pokewiki-flow.webm',
+      video: 'pokewiki-flow.mp4',
       links: [
         { name: 'GitHub', url: 'https://github.com/BelaSchrammDev/DA_NG_pokewiki' },
         { name: 'Live', url: 'https://pokewiki.bela-schramm.de/' }
