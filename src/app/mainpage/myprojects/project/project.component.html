@@ -3,8 +3,18 @@
     <div [style.flex-direction]="otherDirection ? 'row-reverse' : 'row'" class="content">
         @if (project) {
         <div class="picture_section">
+            @if(project.video) {
+            <video [ngClass]="{'picture_right': !otherDirection, 'picture_left': otherDirection, 'picture': true }"
+                src="./assets/videos/{{ project.video }}" alt="" [disablePictureInPicture]="true"
+                [disableRemotePlayback]="true" [disablePictureInPicture]="true" [disableRemotePlayback]="true"
+                [autoplay]="true" [controls]="false" [loop]="true" [muted]="true"
+                [controlsList]="'nodownload nofullscreen noremoteplayback nooverlay noprogressbar noshare nozoom'"
+                onplay="this.controls=false;"></video>
+            }
+            @else {
             <img [ngClass]="{'picture_right': !otherDirection, 'picture_left': otherDirection, 'picture': true }"
                 src="./assets/images/projects/{{ project.image }}" alt="">
+            }
             <div class="frame"></div>
             <div [ngClass]="{'badge_right': !otherDirection, 'badge_left': otherDirection, 'badge': true }">
                 <svg class="badge_svg" width="76" height="76" viewBox="0 0 76 76" fill="none"

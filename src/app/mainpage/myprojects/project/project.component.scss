@@ -12,8 +12,7 @@ $project-padding: 20px;
 
 section {
     position: relative;
-    // overflow: hidden;
-    margin: $project-padding;
+    padding: $project-padding;
 
     .projectnum {
         position: absolute;
@@ -39,6 +38,7 @@ section {
             .picture {
                 width: 100%;
                 height: 100%;
+                border-radius: $project-padding;
                 filter: grayscale(100%);
                 transition: filter 0.3s ease-in-out;
             }
@@ -58,6 +58,7 @@ section {
                 left: 0;
                 right: 0;
                 border: 4px solid black;
+                border-radius: $project-padding;
                 opacity: 0;
                 transition: opacity 0.3s ease-in-out;
                 z-index: -1;
@@ -135,6 +136,7 @@ section {
                     font-weight: 500;
                     color: black;
                     border: 4px solid black;
+                    border-radius: 10px;
                     background-color: unset;
                     padding: 5px 10px;
                     cursor: pointer;
@@ -184,7 +186,7 @@ section {
 @media (max-width: 650px) {
 
     section {
-        padding-top: calc($project-title-font-size + 20px) !important;
+        padding-top: 60px;
     }
 
     .projectnum {
@@ -198,8 +200,14 @@ section {
 
     .picture_section {
         width: 85vw !important;
-        height: fit-content !important;
-        // height: calc(85vw * 0.66) !important;
+
+        .frame {
+            border-radius: 10px !important;
+        }
+
+        .picture {
+            border-radius: 10px !important;
+        }
     }
 
     .description {

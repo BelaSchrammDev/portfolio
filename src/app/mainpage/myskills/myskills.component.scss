@@ -16,6 +16,7 @@ section {
         align-items: flex-start;
         gap: 20px;
         border: $border-width solid black;
+        border-radius: 20px;
 
         .title {
             padding-left: $main-padding-side;
@@ -61,6 +62,14 @@ section {
 
         &:hover>span {
             color: $main_highlight_color;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    section {
+        .skillset {
+            border-radius: 10px;
         }
     }
 }
