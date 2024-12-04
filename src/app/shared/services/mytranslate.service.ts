@@ -278,7 +278,7 @@ export class MytranslateService {
           ` },
         {
           lang: 'de', text: `
-          Hallo! Ich bin ein leidenschaftlicher Front-End-Entwickler aus <span class="hl-text">Leipzig</span>. Es begeistert mich, <span class="hl-text">Designern und Unternehmen</span> dabei zu helfen, ihre <span class="hl-text">kreativen Visionen</span> zum Leben zu erwecken. Besonders fasziniert mich, wie Dinge funktionieren – oder manchmal eben nicht. Ich liebe es, die Mechanik hinter den Kulissen zu verstehen und Probleme strukturiert und gründlich zu analysieren.
+          Hallo! Ich bin ein leidenschaftlicher Front-End-Entwickler aus <span class="hl-text">Leipzig</span>. Es begeistert mich, <span class="hl-text">Designern und Unternehmen</span> dabei zu helfen, ihre <span class="hl-text">kreativen Visionen</span> zum Leben zu erwecken. Besonders fasziniert mich, wie Dinge funktionieren – oder manchmal auch nicht. Ich liebe es, die Mechanik hinter den Kulissen zu verstehen und Probleme strukturiert und gründlich zu analysieren.
           Mit einem <span class="hl-text">Auge fürs Detail</span> und einer strukturierten Arbeitsweise gehe ich jede Herausforderung an. Fehler in der Software? <span class="hl-text">Kein Problem!</span> Ich sehe sie als spannende Rätsel, die darauf warten, gelöst zu werden.
           Ich freue mich darauf, meine Entwicklerkarriere als Webentwickler weiter auszubauen und bin gespannt auf neue, <span class="hl-text">aufregende Projekte.</span> Wenn Sie denken, dass ich gut zu Ihrem Team und Ihren Projekten passen könnte, zögern Sie nicht, mich zu kontaktieren!
           ` }
