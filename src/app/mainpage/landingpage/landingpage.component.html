@@ -1,12 +1,18 @@
 <section>
-    <div class="headline">
+    <div class="headline" (mouseenter)="showAudioPlayer=true" (mouseleave)="showAudioPlayer=false">
         <span class="first-headline"> Frontend</span>
         <span class="second-headline"> Developer </span>
         <div class="namebar">
             <div class="line-wrapper">
                 <div class="line"></div>
             </div>
-            <span>Béla Schramm</span>
+            <span class="myname">Béla Schramm</span>
+            <div class="player" [ngClass]="{'showplayer': showAudioPlayer || playingAudioPlayer}">
+                <audio id="audioPlayer" controls controlsList="nodownload noplaybackrate" (playing)="playingAudioPlayer=true" (pause)="playingAudioPlayer=false">
+                    <source src="./assets/audio/welcome.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
         </div>
     </div>
     <div class="scrollinfo">

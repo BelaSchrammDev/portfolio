@@ -3,7 +3,7 @@
 $name-font-size: clamp(16px, calc(48px * 100vw / $max-width), 48px);
 
 section {
-    flex-grow: 1;
+    // flex-grow: 1;
     min-height: 90svh;
     display: flex;
     flex-direction: column;
@@ -59,8 +59,10 @@ section {
         }
 
         .namebar {
+            position: relative;
             padding-top: 10px;
             width: 70vw;
+            height: fit-content;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -80,12 +82,35 @@ section {
                 }
             }
 
-            font-family: Overpass;
-            font-weight: 700;
-            font-size: $name-font-size;
-            line-height: $name-font-size;
-            white-space: nowrap;
-            color: #5988FF;
+            .myname {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: Overpass;
+                font-weight: 700;
+                font-size: $name-font-size;
+                text-align: center;
+                padding-top: calc($name-font-size * 0.2);
+                line-height: $name-font-size;
+                white-space: nowrap;
+                color: #5988FF;
+            }
+
+            .player {
+                position: absolute;
+                top: calc($name-font-size + $main-padding-side) ;
+                max-height: 0;
+                overflow: hidden;
+                height: fit-content;
+                width: fit-content;
+                transition: all 1s ease-in-out;
+
+            }
+
+            .showplayer {
+                max-height: 300px;
+            }
+
         }
 
         @keyframes extendLine {

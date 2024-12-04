@@ -7,7 +7,7 @@
             <video [ngClass]="{'picture_right': !otherDirection, 'picture_left': otherDirection, 'picture': true }"
                 src="./assets/videos/{{ project.video }}" alt="" [disablePictureInPicture]="true"
                 [disableRemotePlayback]="true" [disablePictureInPicture]="true" [disableRemotePlayback]="true"
-                [autoplay]="true" [controls]="false" [loop]="true" [muted]="true"
+                [autoplay]="true" [controls]="false" [loop]="true" [muted]="true" [playsInline]="true"
                 [controlsList]="'nodownload nofullscreen noremoteplayback nooverlay noprogressbar noshare nozoom'"
                 onplay="this.controls=false;"></video>
             }
