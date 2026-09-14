@@ -29,6 +29,17 @@ export class MyprojectsComponent {
 
   projectlist: Project[] = [
     {
+      name: 'Production Inventory Manager',
+      tags: ['C#', 'Unit Tests', 'CI/CD'],
+      description: 'A C# Programmable Block script for Space Engineers that automates inventory sorting and production logistics.',
+      descriptionID: 'desc_pim',
+      image: 'pim-preview.jpg',
+      links: [
+        { name: 'GitHub', url: 'https://github.com/BelaSchrammDev/PIM1.0' },
+        { name: 'Steam', url: 'https://steamcommunity.com/sharedfiles/filedetails/?id=2080547657' }
+      ],
+    },
+    {
       name: 'DABubble',
       tags: ['Angular', 'SCSS', 'TypeScript', 'Firebase'],
       description: 'A social networking app that allows users to join groups and create events.',

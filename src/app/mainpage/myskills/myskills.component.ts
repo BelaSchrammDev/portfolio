@@ -12,6 +12,7 @@ export class MyskillsComponent {
   translate = inject(MytranslateService);
 
   skillSet = [
+    { name: 'C#', icon: 'csharp.png' },
     { name: 'Angular', icon: 'angular.svg' },
     { name: 'API', icon: 'api.svg' },
     { name: 'CSS', icon: 'css.svg' },
@@ -22,6 +23,5 @@ export class MyskillsComponent {
     { name: 'TypeScript', icon: 'typescript.svg' },
     { name: 'Scrum', icon: 'scrum.svg' },
     { name: 'Material Design', icon: 'material.svg' },
-    { name: 'C#', icon: 'csharp.png' },
   ]
 }

@@ -226,6 +226,27 @@ export class MytranslateService {
       ]
     },
     {
+      id: 'desc_pim',
+      lang: [
+        {
+          lang: 'en', text: `
+          Production Inventory Manager (PIM) is a C# script for the game Space Engineers that automatically sorts inventories, 
+          feeds refineries and assemblers, and keeps a base running without manual micromanagement. Published on the Steam Workshop and actively used by other players. 
+          Since a single script tick has a hard instruction budget, the whole system is built as cooperative jobs that each do a slice of work per tick and hand control back — 
+          around 7,000 lines across 70-odd files, with unit tests and a CI pipeline on GitHub.
+          `
+        },
+        {
+          lang: 'de', text: `
+          Production Inventory Manager (PIM) ist ein C#-Skript für das Spiel Space Engineers, das Inventare automatisch sortiert, 
+          Raffinerien und Assembler versorgt und eine Basis ohne manuelles Eingreifen am Laufen hält. Veröffentlicht im Steam Workshop und von anderen Spielern aktiv genutzt. 
+          Da ein einzelner Skript-Tick ein festes Instruktionsbudget hat, ist das System als kooperative Jobs aufgebaut, die pro Tick jeweils einen Teil der Arbeit erledigen und die Kontrolle wieder abgeben — 
+          rund 7.000 Zeilen über etwa 70 Dateien, mit Unit-Tests und einer CI-Pipeline auf GitHub.
+          `
+        }
+      ]
+    },
+    {
       id: 'sayhi',
       lang: [
         { lang: 'en', text: 'Say Hi!' },
@@ -272,15 +293,15 @@ export class MytranslateService {
       lang: [
         {
           lang: 'en', text: `
-          Hello! I am a passionate Front-End Developer from <span class="hl-text">Leipzig</span>. I am excited about helping <span class="hl-text">designers and businesses</span> bring their <span class="hl-text">creative visions</span> to life. I am particularly fascinated by how things work – or sometimes, how they don't. I love understanding the mechanics behind the scenes and analyzing problems in a structured and thorough way.
-          With an <span class="hl-text">eye for detail</span> and a structured approach, I tackle every challenge. Bugs in the software? <span class="hl-text">No problem!</span> I see them as exciting puzzles waiting to be solved.
-          I am eager to continue building my development career as a web developer and look forward to new, <span class="hl-text">exciting projects.</span> If you think I could be a good fit for your team and your projects, don't hesitate to contact me!
+          Hello! I am a software developer focused on <span class="hl-text">C#/.NET</span>, currently working at Wiesecker Group in Weißenfels. There I help develop the company's in-house ERP software as part of a migration from a legacy <span class="hl-text">Access/VBA</span> solution to a modern .NET application, building desktop UIs in WinForms and WPF and maintaining unit and UI tests.
+          Alongside that, I completed a <span class="hl-text">Front-End training</span> in Angular and TypeScript, which is also where the projects on this page come from. Before moving into software development, I spent over <span class="hl-text">20 years in CNC manufacturing</span>, most recently with responsibility for technology and a production team — a background that still shapes how I work today: structured, precise, and focused on how systems actually behave in practice.
+          I am open to new, <span class="hl-text">challenging projects</span> across the stack. If you think I could be a good fit for your team, don't hesitate to contact me!
           ` },
         {
           lang: 'de', text: `
-          Hallo! Ich bin ein leidenschaftlicher Front-End-Entwickler aus <span class="hl-text">Leipzig</span>. Es begeistert mich, <span class="hl-text">Designern und Unternehmen</span> dabei zu helfen, ihre <span class="hl-text">kreativen Visionen</span> zum Leben zu erwecken. Besonders fasziniert mich, wie Dinge funktionieren – oder manchmal auch nicht. Ich liebe es, die Mechanik hinter den Kulissen zu verstehen und Probleme strukturiert und gründlich zu analysieren.
-          Mit einem <span class="hl-text">Auge fürs Detail</span> und einer strukturierten Arbeitsweise gehe ich jede Herausforderung an. Fehler in der Software? <span class="hl-text">Kein Problem!</span> Ich sehe sie als spannende Rätsel, die darauf warten, gelöst zu werden.
-          Ich freue mich darauf, meine Entwicklerkarriere als Webentwickler weiter auszubauen und bin gespannt auf neue, <span class="hl-text">aufregende Projekte.</span> Wenn Sie denken, dass ich gut zu Ihrem Team und Ihren Projekten passen könnte, zögern Sie nicht, mich zu kontaktieren!
+          Hallo! Ich bin Softwareentwickler mit Schwerpunkt <span class="hl-text">C#/.NET</span>, aktuell bei der Wiesecker Group in Weißenfels tätig. Dort entwickle ich die hauseigene ERP-Software im Rahmen einer Migration von einer <span class="hl-text">Access-/VBA-Lösung</span> zu einer modernen .NET-Anwendung mit, inklusive Desktop-Oberflächen in WinForms und WPF sowie der Pflege von Unit- und UI-Tests.
+          Daneben habe ich eine <span class="hl-text">Front-End-Ausbildung</span> in Angular und TypeScript abgeschlossen, aus der auch die Projekte auf dieser Seite stammen. Vor dem Wechsel in die Softwareentwicklung war ich über <span class="hl-text">20 Jahre in der CNC-Fertigung</span> tätig, zuletzt mit Technologie- und Teamverantwortung – das prägt bis heute meine strukturierte, präzise Arbeitsweise und mein Verständnis für technische Abläufe.
+          Ich bin offen für neue, <span class="hl-text">herausfordernde Projekte</span> über den gesamten Stack hinweg. Wenn Sie denken, dass ich gut zu Ihrem Team passen könnte, zögern Sie nicht, mich zu kontaktieren!
           ` }
       ]
     },
