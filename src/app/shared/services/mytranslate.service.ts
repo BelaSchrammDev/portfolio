@@ -296,12 +296,16 @@ export class MytranslateService {
           Hello! I am a software developer focused on <span class="hl-text">C#/.NET</span>, currently working at Wiesecker Group in Weißenfels. There I help develop the company's in-house ERP software as part of a migration from a legacy <span class="hl-text">Access/VBA</span> solution to a modern .NET application, building desktop UIs in WinForms and WPF and maintaining unit and UI tests.
           Alongside that, I completed a <span class="hl-text">Front-End training</span> in Angular and TypeScript, which is also where the projects on this page come from. Before moving into software development, I spent over <span class="hl-text">20 years in CNC manufacturing</span>, most recently with responsibility for technology and a production team — a background that still shapes how I work today: structured, precise, and focused on how systems actually behave in practice.
           I am open to new, <span class="hl-text">challenging projects</span> across the stack. If you think I could be a good fit for your team, don't hesitate to contact me!
+                    <br><br>
+          I also spoke about this career change in more detail in a <a class="hl-text" href="https://www.youtube.com/watch?v=ZPTSr2pomHs" target="_blank" rel="noopener noreferrer">podcast interview</a>.
           ` },
         {
           lang: 'de', text: `
           Hallo! Ich bin Softwareentwickler mit Schwerpunkt <span class="hl-text">C#/.NET</span>, aktuell bei der Wiesecker Group in Weißenfels tätig. Dort entwickle ich die hauseigene ERP-Software im Rahmen einer Migration von einer <span class="hl-text">Access-/VBA-Lösung</span> zu einer modernen .NET-Anwendung mit, inklusive Desktop-Oberflächen in WinForms und WPF sowie der Pflege von Unit- und UI-Tests.
           Daneben habe ich eine <span class="hl-text">Front-End-Ausbildung</span> in Angular und TypeScript abgeschlossen, aus der auch die Projekte auf dieser Seite stammen. Vor dem Wechsel in die Softwareentwicklung war ich über <span class="hl-text">20 Jahre in der CNC-Fertigung</span> tätig, zuletzt mit Technologie- und Teamverantwortung – das prägt bis heute meine strukturierte, präzise Arbeitsweise und mein Verständnis für technische Abläufe.
           Ich bin offen für neue, <span class="hl-text">herausfordernde Projekte</span> über den gesamten Stack hinweg. Wenn Sie denken, dass ich gut zu Ihrem Team passen könnte, zögern Sie nicht, mich zu kontaktieren!
+                    <br><br>
+          Über diesen Karrierewechsel habe ich auch ausführlicher in einem <a class="hl-text" href="https://www.youtube.com/watch?v=ZPTSr2pomHs" target="_blank" rel="noopener noreferrer">Podcast-Interview</a> gesprochen.
           ` }
       ]
     },
