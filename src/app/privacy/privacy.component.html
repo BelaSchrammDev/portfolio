@@ -1,3 +1,7 @@
 <section>
+    @if (translate.getLanguage() === 'de') {
     <app-privacyde></app-privacyde>
+    } @else {
+    <app-privacyen></app-privacyen>
+    }
 </section>
